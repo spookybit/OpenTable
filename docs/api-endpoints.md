@@ -1,25 +1,27 @@
-root:
-GET /
+# API Endpoints
 
-users:
-POST /api/users
-PATCH /api/users
+### root:
+- GET /
 
-session:
-POST /api/session
-DELETE /api/session
+### users:
+- POST /api/users
+- PATCH /api/users
 
-restaurants:
-GET /api/:location/restaurants
-  index
-POST /api/:location/restaurants
-GET /api/:location/restaurants/:id
-PATCH /api/:location/restaurants/:id
+### session:
+- POST /api/session
+- DELETE /api/session
 
-reviews:
-GET /api/:location/:restaurants/:id/reviews
-  index
-GET /api/:location/:restaurants/:id/reviews/:id
-POST /api/:location/:restaurants/:id/reviews
-PATCH /api/:location/:restaurants/:id/reviews/:id
-DELETE /api/:location/:restaurants/:id/reviews/:id
+### restaurants:
++ GET /api/:location/restaurants
+  - index
+- POST /api/:location/restaurants
+- GET /api/:location/restaurants/:id
+- PATCH /api/:location/restaurants/:id
+
+### reviews:
+- GET /api/:location/:restaurants/:id/reviews
+  - index
+- GET /api/:location/:restaurants/:id/reviews/:id
+- POST /api/:location/:restaurants/:id/reviews
+- PATCH /api/:location/:restaurants/:id/reviews/:id
+- DELETE /api/:location/:restaurants/:id/reviews/:id

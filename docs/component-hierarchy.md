@@ -1,36 +1,38 @@
-Home Container
-  Locations
-  Reservation Search
+##Component Hierarchy
 
-Location Container
-  Restaurant Index
+**Home Container**
+  - Locations
+  - Reservation Search
 
-Restaurant Container
-  mapStateToProps: restaurants
-  mapDispatchToProps: requestAllRestaurants
+**Location Container**
+  - Restaurant Index
 
-  Sidebar
-    Reservation
-    About Info
-    Photos
-    Menu
-    Reviews
+**Restaurant Container**
+  - mapStateToProps: restaurants
+  - mapDispatchToProps: requestAllRestaurants
 
-  Reservation Form Component
-  Popular Dishes Container
-  About Info
-  Photos Container
-    mapStateToProps: restaurant (object)
-    mapDispatchToProps: requestSingleRestaurant
-  Menu Link
-  Reviews Container
-    mapStateToProps: restaurant (object)
-    mapDispatchToProps: requestSingleRestaurant
-    Form Container
-      mapDispatchToProps: requestCreateReview
-      Inputs: Rating, Date Visited, Text, [Food, Ambience, Service, Value]
-    Review Index Container
-      Review Post Container
-        Props:
-          Restaurant Object:
-            Rating, Date Visited, Text, Food, Ambience, Service, Value
+  + Sidebar
+    - Reservation
+    - About Info
+    - Photos
+    - Menu
+    - Reviews
+
+  - Reservation Form Component
+  - Popular Dishes Container
+  - About Info
+  + Photos Container
+    - mapStateToProps: restaurant (object)
+    - mapDispatchToProps: requestSingleRestaurant
+  - Menu Link
+  + Reviews Container
+    - mapStateToProps: restaurant (object)
+    - mapDispatchToProps: requestSingleRestaurant
+    + Form Container
+      - mapDispatchToProps: requestCreateReview
+      - Inputs: Rating, Date Visited, Text, [Food, Ambience, Service, Value]
+    + Review Index Container
+      + Review Post Container
+        + Props:
+          + Restaurant Object:
+            - Rating, Date Visited, Text, Food, Ambience, Service, Value
