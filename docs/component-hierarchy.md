@@ -1,4 +1,4 @@
-##Component Hierarchy
+## Component Hierarchy
 
 **Home Container**
   - Locations
@@ -25,14 +25,14 @@
     - mapStateToProps: restaurant (object)
     - mapDispatchToProps: requestSingleRestaurant
   - Menu Link
-  + Reviews Container
+  - Reviews Container
     - mapStateToProps: restaurant (object)
     - mapDispatchToProps: requestSingleRestaurant
     + Form Container
       - mapDispatchToProps: requestCreateReview
       - Inputs: Rating, Date Visited, Text, [Food, Ambience, Service, Value]
     + Review Index Container
-      + Review Post Container
-        + Props:
-          + Restaurant Object:
+      - Review Post Container
+        - Props:
+          - Restaurant Object:
             - Rating, Date Visited, Text, Food, Ambience, Service, Value

@@ -1,38 +1,48 @@
 ## Schema ##
 
-# users:
-- id                  t.integer  not null, primary key
-- username            t.string  not null, index, unique
-- location            t.string
-- email               t.string  not null, index, unique
-- password_digest     t.string  not null
-- session_token       t.string  not null, index, unique
+## users
+column name     | data type | details
+----------------|-----------|-----------------------
+id              | integer   | not null, primary key
+username        | string    | not null, indexed, unique
+email           | string    | not null, indexed, unique
+password_digest | string    | not null
+session_token   | string    | not null, indexed, unique
+location        | string    |
 
-# restaurants:
-- id                  t.integer  not null, primary key, unique
-- name                t.string   not null, index, unique
-- location            t.string   not null, index
-- rating              t.integer
-- price               t.string   not null
+## restaurants
+column name     | data type | details
+----------------|-----------|-----------------------
+id              | integer   | not null, primary key, unique
+name            | string    | not null, index, unique
+location        | string    | not null, index
+rating          | integer   |
+price           | string    | not null
 
-# favorites:
-- id                  t.integer  not null, primary key, unique
-- user_id             t.integer
-- restaurant_id       t.integer
+## favorites
+column name     | data type | details
+----------------|-----------|-----------------------
+id              | integer   | not null, primary key, unique
+user_id         | integer   | not null
+restaurant_id   | integer   | not null
 
-# reservations:
-- id                  t.integer  not null, primary key, unique
-- user_id             t.integer
-- restaurant_id       t.integer
+## reservations
+column name     | data type | details
+----------------|-----------|-----------------------
+id              | integer   | not null, primary key, unique
+user_id         | integer   | not null, index
+restaurant_id   | integer   | not null, index
 
-# reviews:
-- id                  t.integer  not null, primary key
-- user_id             t.integer  not null, index
-- restaurant_id       t.integer  not null, index
-- rating              t.integer  not null
-- date_visited        t.string   not null
-- description         t.text     not null
-- food                t.integer  not null
-- ambience            t.integer  not null
-- service             t.integer  not null
-- value               t.integer  not null
+## restaurants
+column name     | data type | details
+----------------|-----------|-----------------------
+id              | integer   | not null, primary key, unique
+user_id         | integer   | not null, index, unique
+restaurant_id   | string    | not null
+rating          | integer   | not null
+date_visited    | string    | not null
+description     | integer   | not null
+food            | string    | not null
+ambience        | integer   | not null
+service         | string    | not null
+value           | string    | not null
