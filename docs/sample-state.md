@@ -4,7 +4,7 @@
     id: 1,
     username: "random",
     location: "random",
-    favorites: "restaurantIndexNumbers"
+    favorites: ["restaurantIndexNumbers"]
     reservations: [{restaurantName: {date: "010101", time-slot: 15301600}}]
   },
   restaurantIndex: {

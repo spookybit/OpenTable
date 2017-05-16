@@ -20,8 +20,9 @@
 [wireframes]: /docs/wireframes
 
 **Implementation Timeline**
-- Phase 1: Backend Setup and Front End User Authentication
-- Phase 2: Restaurant model, API, and components
-- Phase 3: Review model, API, and components
-- Phase 4: Reservations
-- Phase 5: Search feature for restaurants
+- Phase 1: Backend Setup and Front End User Authentication (2 days)
+- Phase 2: Restaurant model, API, and components (2 days)
+- Phase 3: Review model, API, and components (2 days)
+- Phase 4: Reservations (1 day)
+- Phase 5: Search feature for restaurants (1 day)
+- Phase 6: Favorites (1 day)
