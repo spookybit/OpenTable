@@ -6,7 +6,7 @@
     - mapStateToProps: localRestaurants
     - mapDispatchToProps: requestCreateReservation, requestSingleRestaurant
 
-**Location Container**
+**Locations Container**
   - mapStateToProps: restaurants
   - mapDispatchToProps: requestAllRestaurants
   - Restaurant Index
