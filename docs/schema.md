@@ -8,16 +8,16 @@ username        | string    | not null, indexed, unique
 email           | string    | not null, indexed, unique
 password_digest | string    | not null
 session_token   | string    | not null, indexed, unique
-location        | string    |
 
 ## restaurants
 column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key, unique
 name            | string    | not null, index, unique
-location        | string    | not null, index
+location_id     | integer   | not null, index
 rating          | integer   |
 price           | string    | not null
+hours           | integer   | not null
 
 ## favorites
 column name     | data type | details
@@ -32,8 +32,10 @@ column name     | data type | details
 id              | integer   | not null, primary key, unique
 user_id         | integer   | not null, index
 restaurant_id   | integer   | not null, index
+time_slot       | string    | not null
+date            | string    | not null
 
-## restaurants
+## reviews
 column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key, unique
@@ -42,7 +44,9 @@ restaurant_id   | string    | not null
 rating          | integer   | not null
 date_visited    | string    | not null
 description     | integer   | not null
-food            | string    | not null
-ambience        | integer   | not null
-service         | string    | not null
-value           | string    | not null
+
+## locations
+column name     | data type | details
+----------------|-----------|-----------------------
+id              | integer   | not null, primary key, unique
+location        | string    | not null, index, unique

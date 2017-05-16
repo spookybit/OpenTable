@@ -1,7 +1,7 @@
 ## README
 
 **Heroku Link**
-tba
+- tba
 
 **Minimum Viable Products**
 - Host on Heroku
@@ -15,7 +15,7 @@ tba
 - Bonus: points for bookings and usage of site
 
 **Wireframes**
-folder
+- folder
 
 **Implementation Timeline**
 - Phase 1: Backend Setup and Front End User Authentication
@@ -23,5 +23,3 @@ folder
 - Phase 3: Review model, API, and components
 - Phase 4: Reservations
 - Phase 5: Search feature for restaurants
-- Phase 6:
-- Phase 7:

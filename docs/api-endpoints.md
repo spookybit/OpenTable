@@ -1,27 +1,19 @@
 # API Endpoints
 
-### root:
+### root
 - GET /
 
-### users:
+### users
 - POST /api/users
-- PATCH /api/users
 
-### session:
+### session
 - POST /api/session
 - DELETE /api/session
 
-### restaurants:
-+ GET /api/:location/restaurants
+### restaurants
++ GET /api/restaurants
   - index
-- POST /api/:location/restaurants
-- GET /api/:location/restaurants/:id
-- PATCH /api/:location/restaurants/:id
-
-### reviews:
-- GET /api/:location/:restaurants/:id/reviews
-  - index
-- GET /api/:location/:restaurants/:id/reviews/:id
-- POST /api/:location/:restaurants/:id/reviews
-- PATCH /api/:location/:restaurants/:id/reviews/:id
-- DELETE /api/:location/:restaurants/:id/reviews/:id
+- POST /api/restaurants
+- GET /api/restaurants/:id
+- PATCH /api/restaurants/:id
+- GET /api/restaurants/:id/:review_id

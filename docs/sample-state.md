@@ -5,11 +5,7 @@
     username: "random",
     location: "random",
     favorites: "restaurantIndexNumbers"
-    reservations:
-      reservationId: {
-        user_id: 4,
-        restaurant_id: 5
-      }
+    reservations: [{restaurantName: {date: "010101", time-slot: 15301600}}]
   },
   restaurantIndex: {
     1: {
@@ -17,26 +13,23 @@
       location: "random",
       rating: 5,
       price: 4,
-      id: 5
+      id: 5,
+      hours: 09002030
+      description: "McDonalds for life"
+      reviews: {
+        id: {
+          restaurantIndexId: 1,
+          Rating: 5
+          Date Visited: "12/12/12"
+          Text: "Good"
+        }
+      }
     }
   },
-  singleRestaurant: {
-    name: "McDonalds",
-    loaction: "random",
-    rating: 5,
-    price: 4,
-    id: 5
-  },
-  review: {
+  location:
     id: {
-      restaurantIndexId: 1,
-      Rating: 5
-      Date Visited: "12/12/12"
-      Text: "Good"
-      Food: 5
-      Ambience: 5
-      Service: 5
-      Value: 5
+      id: 1
+      location: "Tokyo"
     }
   }
 }
