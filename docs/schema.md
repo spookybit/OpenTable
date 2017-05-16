@@ -18,6 +18,7 @@ location_id     | integer   | not null, index
 rating          | integer   |
 price           | string    | not null
 hours           | integer   | not null
+description     | Text      |
 
 ## favorites
 column name     | data type | details
@@ -32,8 +33,9 @@ column name     | data type | details
 id              | integer   | not null, primary key, unique
 user_id         | integer   | not null, index
 restaurant_id   | integer   | not null, index
-time_slot       | string    | not null
+time_slot       | integer   | not null
 date            | string    | not null
+num_guests      | integer   | not null
 
 ## reviews
 column name     | data type | details
