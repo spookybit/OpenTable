@@ -41,11 +41,11 @@ num_guests      | integer   | not null
 column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key, unique
-user_id         | integer   | not null, index, unique
-restaurant_id   | string    | not null
+user_id         | integer   | not null, index
+restaurant_id   | integer   | not null, index
 rating          | integer   | not null
 date_visited    | string    | not null
-description     | integer   | not null
+description     | text      | not null
 
 ## locations
 column name     | data type | details
