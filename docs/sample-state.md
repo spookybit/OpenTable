@@ -5,7 +5,7 @@
     username: "random",
     location: "random",
     favorites: ["restaurantIndexNumbers"]
-    reservations: [{restaurantName: {date: "010101", time-slot: 15301600, guests: 5}}]
+    reservations: [{restaurantName: {date: "010101", time-slot: "15301600", guests: 5}}]
   },
   restaurantIndex: {
     1: {
@@ -14,7 +14,7 @@
       rating: 5,
       price: 4,
       id: 5,
-      hours: 09002030
+      hours: "09002030"
       description: "McDonalds for life"
       reviews: {
         id: {
