@@ -1,12 +1,14 @@
 ```js
 {
-  currentUser: {
-    id: 1,
-    username: "random",
-    location: "random",
-    favorites: ["restaurantIndexNumbers"]
-    reservations: [{restaurantName: {date: "010101", time-slot: "15301600", guests: 5}}]
-  },
+  session: {
+    currentUser: {
+      id: 1,
+      username: "random",
+      favorites: ["restaurantIndexNumbers"]
+      reservations: [{restaurantName: {date: "010101", time-slot: "15301600", guests: 5}}]
+    },
+    errors: []
+  }
   restaurantIndex: {
     1: {
       name: "McDonalds",

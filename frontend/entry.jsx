@@ -12,5 +12,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // window.store = store;
 
-  ReactDOM.render(<h1>hi</h1>, root);
+  ReactDOM.render(<h1>hiwerere</h1>, root);
 });

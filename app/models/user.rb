@@ -4,7 +4,6 @@
 #
 #  id              :integer          not null, primary key
 #  username        :string           not null
-#  email           :string           not null
 #  password_digest :string           not null
 #  session_token   :string           not null
 #  created_at      :datetime         not null
@@ -12,7 +11,7 @@
 #
 
 class User < ApplicationRecord
-  validates :username, :email, :password_digest, :session_token, presence: true
+  validates :username, :password_digest, :session_token, presence: true
   validates :password, length: { minimum: 6, allow_nil: true }
 
   has_many :reviews
@@ -50,5 +49,5 @@ class User < ApplicationRecord
   def guarantee_session_token
     self.session_token ||= generate_session_token
   end
-  
+
 end
