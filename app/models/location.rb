@@ -9,5 +9,7 @@
 #
 
 class Location < ApplicationRecord
+  validates :location, presence: true
+  validates :location, uniqueness: true
   has_many :restaurants
 end

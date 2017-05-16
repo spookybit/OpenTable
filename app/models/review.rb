@@ -13,6 +13,8 @@
 #
 
 class Review < ApplicationRecord
+  validates :user_id, :restaurant_id, :rating, :date_visited, :description, presence: true
+
   belongs_to :user
   belongs_to :restaurant
 end

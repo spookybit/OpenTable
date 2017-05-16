@@ -13,7 +13,7 @@ session_token   | string    | not null, indexed, unique
 column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key, unique
-name            | string    | not null, index, unique
+name            | string    | not null, index
 location_id     | integer   | not null, index
 rating          | integer   |
 price           | string    | not null

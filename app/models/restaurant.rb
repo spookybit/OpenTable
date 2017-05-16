@@ -14,6 +14,8 @@
 #
 
 class Restaurant < ApplicationRecord
+  validates :name, :location_id, :price, :hours, presence: true
+
   belongs_to :location
   has_many :reviews
   has_many :reservations
