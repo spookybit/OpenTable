@@ -15,7 +15,7 @@
 - Bonus: points for bookings and usage of site
 
 **Wireframes**
-* [Wireframes]: /wireframes
+* [Wireframes] (/wireframes)
 
 **Implementation Timeline**
 - Phase 1: Backend Setup and Front End User Authentication
