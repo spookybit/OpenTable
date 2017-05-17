@@ -1,20 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {login, signup, logout} from './util/sessions_api_util';
-
-// import Root from './components/root';
 import configureStore from './store/store';
-//
-// import * as actions from './actions/post_actions';
-// import { selectAllPosts } from './reducers/selectors';
+import Root from './components/root';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
-
   const store = configureStore();
 
   window.store = store;
 
-  ReactDOM.render(<h1>hiwerere</h1>, root);
+  ReactDOM.render(<Root store={store} />, root);
 });
