@@ -19,4 +19,4 @@ const Greeting = ({ currentUser, logout }) => (
   currentUser ? personalGreeting(currentUser, logout) : sessionLinks()
 );
 
-export default Greetings;
+export default Greeting;
