@@ -2,17 +2,21 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import {Route, Redirect, Switch, Link, HashRouter} from 'react-router-dom';
 
-import GreetingContainer from './greeting/greeting_container';
+import Modal from 'react-modal';
+
+import {AuthRoute} from '../util/route_util';
+
+import HeadingContainer from './heading/heading_container';
 import SessionFormContainer from './session_form/session_form_container';
 
 const App = () => (
   <div>
     <header>
-      <h1>YourMunchTime</h1>
-      <GreetingContainer />
+      <HeadingContainer />
     </header>
-    <Route path="/login" component={SessionFormContainer} />
-    <Route path="/signup" component={SessionFormContainer} />
+
+    <AuthRoute path="/login" component={SessionFormContainer} />
+    <AuthRoute path="/signup" component={SessionFormContainer} />
   </div>
 );
 

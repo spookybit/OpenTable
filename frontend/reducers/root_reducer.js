@@ -5,4 +5,5 @@ const rootReducer = combineReducers({
   session: SessionReducer
 });
 
+// errors: ErrorsReducer
 export default rootReducer;

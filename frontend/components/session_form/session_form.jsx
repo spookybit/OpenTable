@@ -11,15 +11,18 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentWillMount(){
+    this.props.clearErrors();
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const user=this.state;
-    this.state = {
+    this.setState({
       username: "",
       password: ""
-    };
+    });
     this.props.processForm({user});
-    this.renderErrors();
   }
 
   update(field) {
@@ -51,11 +54,11 @@ class SessionForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        YourMunchTime
         <br/>
         {this.props.formType} or {this.navLink()}
         <div className="login-form">
           <br/>
+          {this.renderErrors()}
           <label> Username:
             <input type="text"
               value={this.state.username}
