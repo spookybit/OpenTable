@@ -73,26 +73,31 @@ class Heading extends React.Component {
 
   render() {
     const style = {
-      overlay : {
-        position        : 'fixed',
-        top             : 0,
-        left            : 0,
-        right           : 0,
-        bottom          : 0,
-        backgroundColor : 'rgba(255, 255, 255, 0.75)',
-        zIndex          : 10
-      },
-      content : {
-        position        : 'fixed',
-        top             : 'center',
-        left            : 'center',
-        right           : 'center',
-        bottom          : 'center',
-        border          : '1px solid #ccc',
-        padding         : '20px',
-        zIndex          : 11
-      }
-    };
+  overlay : {
+    position          : 'fixed',
+    top               : 0,
+    left              : 0,
+    right             : 0,
+    bottom            : 0,
+    backgroundColor   : 'rgba(255, 255, 255, 0.75)'
+  },
+  content : {
+    position                   : 'absolute',
+    top                        : '20vh',
+    left                       : '25vw',
+    right                      : '25vw',
+    bottom                     : '10vh',
+    border                     : '1px solid #ccc',
+    background                 : '#fff',
+    overflow                   : 'auto',
+    WebkitOverflowScrolling    : 'touch',
+    borderRadius               : '4px',
+    outline                    : 'none',
+    padding                    : '20px'
+
+  }
+};
+// <div> <img src="http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,w_32/v1495132837/food-2074638_640_vbsknn.png"/></div>
     return (
       <div>
         {this.greeting()}

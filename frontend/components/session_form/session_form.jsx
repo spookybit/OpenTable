@@ -9,6 +9,7 @@ class SessionForm extends React.Component {
       password: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.deployDemo = this.deployDemo.bind(this);
   }
 
   componentWillMount(){
@@ -48,7 +49,7 @@ class SessionForm extends React.Component {
     return(
       <ul>
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <li className="session_errors" key={`error-${i}`}>
             {error}
           </li>
         ))}
@@ -56,31 +57,46 @@ class SessionForm extends React.Component {
     );
   }
 
+  deployDemo() {
+    this.props.login({user: {username: "demo", password:"password"}});
+  }
+
+  // {this.props.formType}
   render() {
     return (
       <form onSubmit={this.handleSubmit} className="submitForm">
-        {this.props.formType}
         <br/>
         <div className="login-form">
+          <div className="form_header">
+            Welcome to YourMunchTime
+          </div>
           <br/>
-          {this.renderErrors()}
-          <label> Username:
-            <input type="text"
-              value={this.state.username}
-              onChange={this.update('username')}
-              className="login-input"
-              />
-          </label>
+          <div>
+            {this.renderErrors()}
+            <label>
+              <input type="text"
+                placeholder="Username *"
+                value={this.state.username}
+                onChange={this.update('username')}
+                className="login-input"
+                />
+            </label>
+            <br/>
+            <label>
+              <input type="password"
+                placeholder="Password *"
+                value={this.state.password}
+                onChange={this.update("password")}
+                className="login-input"
+                />
+            </label>
+          </div>
           <br/>
-          <label>Password:
-            <input type="password"
-              value={this.state.password}
-              onChange={this.update("password")}
-              className="login-input"
-              />
-          </label>
-          <br/>
-          <input type="submit" value="Submit"/>
+          <input type="submit" value="Submit" className="session_submit"/>
+          <div className="form_header">
+            Dont Want to Log In?
+          </div>
+          <div className="demo_button" onClick={this.deployDemo}>Demo</div>
         </div>
       </form>
     );
