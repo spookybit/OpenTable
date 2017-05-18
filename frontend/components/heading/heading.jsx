@@ -30,8 +30,8 @@ class Heading extends React.Component {
   sessionLinks () {
     return (
       <nav className="login-signup">
-        <button onClick={this.openModal("Login")}>Login</button>
-        <button onClick={this.openModal("Sign Up")}>Sign Up</button>
+        <button onClick={this.openModal("login")}>Login</button>
+        <button onClick={this.openModal("sign up")}>Sign Up</button>
       </nav>
     );
 
@@ -53,7 +53,7 @@ class Heading extends React.Component {
   }
 
   onModalClose() {
-    this.setState({modal_props: {isOpen: false}});
+    this.setState({modalOpen: false});
   }
 
   render() {
@@ -65,7 +65,7 @@ class Heading extends React.Component {
           isOpen={this.state.modalOpen}
           onRequestClose={this.onModalClose}
         >
-          <SessionFormContainer />
+          <SessionFormContainer formType={this.state.formType}/>
         </Modal>
       </div>
     );

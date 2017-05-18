@@ -6,7 +6,7 @@ class SessionForm extends React.Component {
     super(props);
     this.state = {
       username: "",
-      password: ""
+      password: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -16,13 +16,19 @@ class SessionForm extends React.Component {
   }
 
   handleSubmit(e) {
+    // debugger;
     e.preventDefault();
     const user=this.state;
+    const formType = this.props.formType;
     this.setState({
       username: "",
       password: ""
     });
-    this.props.processForm({user});
+    if (formType === "login") {
+      this.props.login({user});
+    } else {
+      this.props.signup({user});
+    }
   }
 
   update(field) {
@@ -50,11 +56,11 @@ class SessionForm extends React.Component {
       </ul>
     );
   }
-  // {this.props.formType} or {this.navLink()}
 
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
+        {this.props.formType}
         <br/>
         <div className="login-form">
           <br/>
