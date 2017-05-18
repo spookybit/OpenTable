@@ -50,12 +50,12 @@ class SessionForm extends React.Component {
       </ul>
     );
   }
+  // {this.props.formType} or {this.navLink()}
 
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
         <br/>
-        {this.props.formType} or {this.navLink()}
         <div className="login-form">
           <br/>
           {this.renderErrors()}
