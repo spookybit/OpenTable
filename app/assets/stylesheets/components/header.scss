@@ -48,3 +48,26 @@
 .dropdown-content Link {
   display: block;
 }
+
+.userOptions {
+  display: flex;
+  flex-direction: row;
+}
+
+.userDropdown:hover .user-dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #eef4fb;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1
+}
+
+.user-dropdown-content Link {
+  display: block;
+}

@@ -31,18 +31,25 @@ class Heading extends React.Component {
     return e => this.setState({modalOpen: true, formType: formType});
   }
 
+  dropdownLocations() {
+    return (
+      <div className="dropdown">
+        <button className="dropdown-button">Choose your location</button>
+        <div className="dropdown-content">
+          <Link to="j">Tokyo</Link>
+          <Link to="s">San Francisco</Link>
+          <Link to="n">New York</Link>
+          <Link to="p">Paris</Link>
+        </div>
+      </div>
+    )
+  }
+
+
   sessionLinks () {
     return (
       <nav className="header">
-        <div className="dropdown">
-          <button className="dropdown-button">Choose your location</button>
-          <div className="dropdown-content">
-            <Link to="j">Tokyo</Link>
-            <Link to="s">San Francisco</Link>
-            <Link to="n">New York</Link>
-            <Link to="p">Paris</Link>
-          </div>
-        </div>
+        {this.dropdownLocations()}
         <div>
           <button onClick={this.openModal("login")}>Login</button>
           <button onClick={this.openModal("sign up")}>Sign Up</button>
@@ -52,12 +59,28 @@ class Heading extends React.Component {
 
   }
 
+  userDropdown(currentUser) {
+    return (
+      <div className="userDropdown">
+        <button className="user-dropdown-button">Hi, {currentUser.username}</button>
+        <div className="user-dropdown-content">
+          <Link to="j">Reservations</Link>
+          <Link to="s">Favorites</Link>
+
+        </div>
+      </div>
+    )
+  }
+
   personalGreeting(currentUser) {
     return (
-      <hgroup className="header-group">
-        <h2 className="header-name">Hi, {currentUser.username}!</h2>
-        <button className="header-button"
-          onClick={this.props.logout}>Log Out</button>
+      <hgroup className="header">
+        {this.dropdownLocations()}
+        <div className="userOptions">
+          {this.userDropdown(currentUser)}
+          <button className="header-button"
+            onClick={this.props.logout}>Log Out</button>
+        </div>
       </hgroup>
     );
   }
