@@ -19,8 +19,12 @@ class Heading extends React.Component {
   handleClick(e) {
     e.preventDefault();
     this.setState({modal_props: {isOpen: true}});
+  }
 
-
+  componentWillReceiveProps(newProps) {
+    if (newProps.currentUser) {
+      this.setState({modalOpen: false});
+    }
   }
 
   openModal(formType) {
@@ -29,9 +33,20 @@ class Heading extends React.Component {
 
   sessionLinks () {
     return (
-      <nav className="login-signup">
-        <button onClick={this.openModal("login")}>Login</button>
-        <button onClick={this.openModal("sign up")}>Sign Up</button>
+      <nav className="header">
+        <div className="dropdown">
+          <button className="dropdown-button">Choose your location</button>
+          <div className="dropdown-content">
+            <Link to="j">Tokyo</Link>
+            <Link to="s">San Francisco</Link>
+            <Link to="n">New York</Link>
+            <Link to="p">Paris</Link>
+          </div>
+        </div>
+        <div>
+          <button onClick={this.openModal("login")}>Login</button>
+          <button onClick={this.openModal("sign up")}>Sign Up</button>
+        </div>
       </nav>
     );
 
@@ -57,13 +72,35 @@ class Heading extends React.Component {
   }
 
   render() {
+    const style = {
+      overlay : {
+        position        : 'fixed',
+        top             : 0,
+        left            : 0,
+        right           : 0,
+        bottom          : 0,
+        backgroundColor : 'rgba(255, 255, 255, 0.75)',
+        zIndex          : 10
+      },
+      content : {
+        position        : 'fixed',
+        top             : 'center',
+        left            : 'center',
+        right           : 'center',
+        bottom          : 'center',
+        border          : '1px solid #ccc',
+        padding         : '20px',
+        zIndex          : 11
+      }
+    };
     return (
-      <div className="header">
+      <div>
         {this.greeting()}
         <Modal
           contentLabel="Form"
           isOpen={this.state.modalOpen}
           onRequestClose={this.onModalClose}
+          style={style}
         >
           <SessionFormContainer formType={this.state.formType}/>
         </Modal>
