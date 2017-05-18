@@ -16,7 +16,6 @@ class SessionForm extends React.Component {
   }
 
   handleSubmit(e) {
-    // debugger;
     e.preventDefault();
     const user=this.state;
     const formType = this.props.formType;
@@ -59,7 +58,7 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} className="submitForm">
         {this.props.formType}
         <br/>
         <div className="login-form">
@@ -87,5 +86,6 @@ class SessionForm extends React.Component {
     );
   }
 }
+
 
 export default withRouter(SessionForm);

@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+@import "base/reset.scss";
+@import "base/font.scss";
+
+@import "components/header.scss";

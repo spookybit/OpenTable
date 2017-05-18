@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+  background-color: pink;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.header nav button {
+  background-color: #237B98;
+  color: white;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 13px;
+  font-family: 'Source Sans Pro', sans-serif;
+
+  border: none;
+
+  text-align: center;
+  margin: 4px 2px;
+
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+}
+
+.header nav button:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.submitForm {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  background-color: pink;
+}

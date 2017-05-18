@@ -58,7 +58,7 @@ class Heading extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="header">
         {this.greeting()}
         <Modal
           contentLabel="Form"
