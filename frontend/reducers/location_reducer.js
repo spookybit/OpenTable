@@ -2,18 +2,16 @@ import { merge } from 'lodash';
 
 import { RECEIVE_CURRENT_LOCATION } from '../actions/location_actions';
 
-const nullLocation = Object.freeze({
-});
 
-const LocalRestaurantsReducer = (state = nullLocation, action) => {
+const LocalRestaurantsReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_CURRENT_LOCATION:
-      const currentLocation = action.currentLocation;
-      return merge({}, nullLocation, {currentLocation});
+      return action.currentLocation;
     default:
       return state;
   }
 };
 
+// slice of state for current location reducer
 export default LocalRestaurantsReducer;

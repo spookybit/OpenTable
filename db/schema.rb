@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(version: 20170516173541) do
   create_table "reservations", force: :cascade do |t|
     t.integer  "user_id",       null: false
     t.integer  "restaurant_id", null: false
-    t.integer  "time_slot",     null: false
-    t.integer  "date",          null: false
+    t.string   "time_slot",     null: false
+    t.string   "date",          null: false
     t.integer  "num_guests",    null: false
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20170516173541) do
     t.integer  "location_id", null: false
     t.integer  "rating"
     t.integer  "price",       null: false
-    t.integer  "hours",       null: false
+    t.string   "hours",       null: false
     t.text     "description"
     t.string   "img_url"
     t.datetime "created_at",  null: false
@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 20170516173541) do
     t.integer  "user_id",       null: false
     t.integer  "restaurant_id", null: false
     t.integer  "rating",        null: false
-    t.integer  "date_visited",  null: false
+    t.string   "date_visited",  null: false
     t.text     "description",   null: false
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false

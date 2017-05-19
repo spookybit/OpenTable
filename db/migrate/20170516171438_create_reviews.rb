@@ -4,7 +4,7 @@ class CreateReviews < ActiveRecord::Migration[5.0]
       t.integer :user_id, null: false
       t.integer :restaurant_id, null: false
       t.integer :rating, null: false
-      t.integer :date_visited, null: false
+      t.string :date_visited, null: false
       t.text :description, null: false
 
       t.timestamps

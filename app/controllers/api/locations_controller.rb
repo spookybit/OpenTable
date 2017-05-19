@@ -4,7 +4,7 @@ class Api::LocationsController < ApplicationController
   end
 
   def show
-    @location = Location.find(params[:id])#.includes(:restaurants)
+    @location = Location.includes(:restaurants).find(params[:id])
 
     if @location
       render "api/locations/show"

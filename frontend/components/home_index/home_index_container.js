@@ -8,8 +8,8 @@ const mapStateToProps = ({locationIndex}) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => ({
   allLocations: () => dispatch(allLocations())
-}
+})
 
-export default connect(mapDispatchToProps, mapStateToProps)(HomeIndex);
+export default connect(mapStateToProps, mapDispatchToProps)(HomeIndex);
