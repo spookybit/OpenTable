@@ -13,5 +13,4 @@ const LocalRestaurantsReducer = (state = {}, action) => {
   }
 };
 
-// slice of state for current location reducer
 export default LocalRestaurantsReducer;

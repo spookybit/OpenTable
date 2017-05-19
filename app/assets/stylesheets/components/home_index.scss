@@ -1,4 +1,10 @@
 .indexPhotos {
-  height: 146;
-  width: 260;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.indexPhotos img{
+  max-height: 135px;
+  max-width: 260px;
 }
