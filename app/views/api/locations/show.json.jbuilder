@@ -3,6 +3,8 @@
 json.restaurants @location, :restaurants #includes create time
 
 
+#edit
+
 # id          :integer          not null, primary key
 #  name        :string           not null
 #  location_id :integer          not null
