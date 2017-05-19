@@ -14,6 +14,7 @@
 
 class Review < ApplicationRecord
   validates :user_id, :restaurant_id, :rating, :date_visited, :description, presence: true
+  validates :date_visited, numericality: true, length: 8
 
   belongs_to :user
   belongs_to :restaurant
