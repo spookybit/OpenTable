@@ -14,8 +14,8 @@
 
 class Reservation < ApplicationRecord
   validates :user_id, :restaurant_id, :time_slot, :date, :num_guests, presence: true
-  validates :timeslot, numericality: true, length: 8
-  validates :date, numericality: true, length: 8
+  validates :timeslot, numericality: true, length: {is: 8}
+  validates :date, numericality: true, length: {is: 8}
 
   belongs_to :user
   belongs_to :restaurant

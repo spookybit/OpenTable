@@ -1,1 +1,1 @@
-jon.array! @location, :id, :location
+json.array! @location, :id, :location

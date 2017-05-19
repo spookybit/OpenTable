@@ -6,12 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.destroy_all
 User1 = User.create(username: "demo", password: "password")
 
-Location1 = Location.create(location: "Tokyo")
-Location2 = Location.create(location: "San Francisco")
+Location.destroy_all
+Location1 = Location.create(location: "Tokyo", img_url: "blank")
+Location2 = Location.create(location: "San Francisco", img_url: "blank")
 
-Resstaurant1 = Restaurant.create(name: "McDonalds", location_id: 1,
-  rating: 5, price: 1, hours: "00002400", description: "The best place ever!")
-Restaurant2 = Restaurant.create(name: "Little Luccas", location_id: 2,
-  rating: 5, price: 2, hours: "08001730", description: "Subs")
+Restaurant.destroy_all
+Restaurant1 = Restaurant.create(name: "McDonalds", location_id: Location1.id, rating: 5, price: 1, hours: 2, description: "The best place ever!")
+Restaurant2 = Restaurant.create(name: "Little Luccas", location_id: Location2.id,
+  rating: 5, price: 2, hours: 1, description: "Subs")
