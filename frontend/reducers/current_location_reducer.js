@@ -7,7 +7,7 @@ const CurrentLocationReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     case CURRENT_LOCATION_SLICE:
-      return action.something;
+      return action.currentLocation;
     default:
       return state;
   }

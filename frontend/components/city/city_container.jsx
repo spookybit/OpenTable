@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import City from './city';
-import { currentLocationSlice } from '../../actions/location_actions';
+import { requestLocation } from '../../actions/location_actions';
 
 
 const mapStateToProps = ({currentLocation}) => {
@@ -10,7 +10,7 @@ const mapStateToProps = ({currentLocation}) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  currentLocationSlice: (id) => dispatch(currentLocationSlice(id))
+  requestLocation: (id) => dispatch(requestLocation(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(City);

@@ -20,7 +20,7 @@ export const receiveAllLocations = (locations) => ({
 });
 
 // currentLocation taken from url
-export const currentLocation = currentLocation => dispatch => (
+export const requestLocation = currentLocation => dispatch => (
   locationAPIUtil.singleLocation(currentLocation)
     .then(data => dispatch(receiveCurrentLocation(data)))
 );

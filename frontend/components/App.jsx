@@ -10,15 +10,15 @@ import HeadingContainer from './heading/heading_container';
 import SessionFormContainer from './session_form/session_form_container';
 import HomeIndexContainer from './home_index/home_index_container';
 
-// import CityContainer from './city/city_container';
-// <Switch>
-//   <Route path="/:id" component={CityContainer} />
-// </Switch>
+import CityContainer from './city/city_container';
 
 const App = () => (
   <div>
-    <HomeIndexContainer />
     <HeadingContainer />
+    <Switch>
+      <Route path="/:id" component={CityContainer} />
+      <Route path="/" component={HomeIndexContainer} />
+    </Switch>
 
   </div>
 );

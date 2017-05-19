@@ -7,13 +7,13 @@ class CityRestaurants extends React.Component {
   }
 
   componentDidMount() {
-    currentLocation
-    this.props.params.
-    this.props.currentLocationSlice()
+    this.props.requestLocation(this.props.match.params.id)
   }
 
   render() {
-
+    return (
+      <div>city index</div>
+    )
   }
 
 }

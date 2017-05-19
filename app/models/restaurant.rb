@@ -21,4 +21,17 @@ class Restaurant < ApplicationRecord
   has_many :reviews
   has_many :reservations
   has_many :favorites
+
+  def open_time
+    time = self.hours[0..3].to_i
+    if time > 1200
+      time -= 1200
+      time.to_s + " PM"
+    elsif time < 100
+      time += 1200
+      time.to_s + " AM"
+    else
+      time.to_s + " AM"
+    end
+  end
 end
