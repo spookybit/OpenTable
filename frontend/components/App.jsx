@@ -8,11 +8,12 @@ import {AuthRoute} from '../util/route_util';
 
 import HeadingContainer from './heading/heading_container';
 import SessionFormContainer from './session_form/session_form_container';
+import HomeIndexContainer from './home_index/home_index_container';
 
 const App = () => (
   <div>
     <HeadingContainer />
-
+    <HomeIndexContainer />
 
   </div>
 );

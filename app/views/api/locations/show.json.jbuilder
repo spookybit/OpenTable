@@ -1,16 +1,7 @@
-# json.extract! @location.restaurants do |restaurant|
-
-json.restaurants @location, :restaurants #includes create time
-
-
-#edit
-
-# id          :integer          not null, primary key
-#  name        :string           not null
-#  location_id :integer          not null
-#  rating      :integer
-#  price       :string           not null
-#  hours       :string           not null
-#  description :text
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
+# json.set! city do
+  @location.restaurants.each do |restaurant|
+    # json.set! restaurant.id do
+      json.extract! restaurant, :id, :name, :location_id, :rating, :price, :hours, :description, :img_url
+    # end
+  end
+# end

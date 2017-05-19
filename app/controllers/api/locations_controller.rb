@@ -4,6 +4,13 @@ class Api::LocationsController < ApplicationController
   end
 
   def show
-    @location = Location.find(params[:id])
+    @location = Location.find(params[:id])#.includes(:restaurants)
+
+    if @location
+      render "api/locations/show"
+    else
+      render json: ["can not find location"], status: 401
+    end
+
   end
 end

@@ -9,6 +9,8 @@ import Root from './components/root';
 import { login, logout, signup } from './actions/session_actions';
 import { clearErrors } from './actions/session_actions';
 
+import { currentLocation, allLocations } from './actions/location_actions';
+
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   Modal.setAppElement(root);
@@ -21,6 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
+
+  window.currentLocation = currentLocation;
+  window.allLocations = allLocations;
 
   window.clearErrors = clearErrors;
   window.store = store;
