@@ -6,13 +6,38 @@ class HomeIndex extends React.Component {
     super (props);
   }
 
+  componentDidMount() {
+    this.props.allLocations();
+  }
+
+  citiesList() {
+    const cities = this.props.cities;
+    return cities.map((city, idx) => {
+      return <Link to={`/${city.id}`} key={idx}>{city.location}</Link>;
+    });
+  }
+
+  citiesPhoto() {
+    const cities = this.props.cities;
+    return cities.map((city, idx) => {
+      return <img src={city.img_url} key={idx} />;
+    });
+  }
+
 
   render() {
     return (
       <div>
-        locations tbd
+        <div className="indexPhotos">
+          {this.citiesPhoto()}
+
+        </div>
+
+        <ul>
+          {this.citiesList()}
+        </ul>
       </div>
-    )
+    );
   }
 
 }

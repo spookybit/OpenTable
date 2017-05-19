@@ -11,7 +11,7 @@ const AllLocationsReducer = (state = nullLocations, action) => {
   switch(action.type) {
     case RECEIVE_ALL_LOCATIONS:
       const locations = action.locations;
-      return merge([], nullLocations, [locations]);
+      return merge([], nullLocations, locations);
     default:
       return state;
   }

@@ -42,7 +42,7 @@ class Heading extends React.Component {
           <Link to="p">Paris</Link>
         </div>
       </div>
-    )
+    );
   }
 
 
@@ -69,7 +69,7 @@ class Heading extends React.Component {
 
         </div>
       </div>
-    )
+    );
   }
 
   personalGreeting(currentUser) {
@@ -136,9 +136,5 @@ class Heading extends React.Component {
     );
   }
 }
-// onRequestClose={this.props.onRequestClose}
-// afterOpenModal={this.props.afterOpenModal}
-// closeTimeoutMS={this.props.closeTimeoutMS}
-// style={this.props.style}
 
 export default Heading;
