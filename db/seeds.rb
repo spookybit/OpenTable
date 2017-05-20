@@ -41,3 +41,15 @@ Restaurant7 = Restaurant.create(name: "Grubs", location_id: Location4.id,
 
 Restaurant8 = Restaurant.create(name: "Domino's", location_id: Location4.id,
   rating: 5, price: 1, hours: "000024000", description: "Cheap pizza", img_url: "blank")
+
+Restaurant9 = Restaurant.create(name: "San Tung", location_id: Location5.id,
+  rating: 5, price: 1, hours: "000024000", description: "Ice Cream", img_url: "blank")
+
+Restaurant10 = Restaurant.create(name: "Z & Y", location_id: Location5.id,
+  rating: 5, price: 1, hours: "000024000", description: "$1.63 kids meal", img_url: "blank")
+
+Restaurant11 = Restaurant.create(name: "Kome", location_id: Location6.id,
+  rating: 5, price: 1, hours: "000024000", description: "Grub dub here", img_url: "blank")
+
+Restaurant12 = Restaurant.create(name: "Eatsa", location_id: Location6.id,
+  rating: 5, price: 1, hours: "000024000", description: "Cheap pizza", img_url: "blank")

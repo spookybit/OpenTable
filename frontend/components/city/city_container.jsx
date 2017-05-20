@@ -3,9 +3,9 @@ import City from './city';
 import { requestLocation } from '../../actions/location_actions';
 
 
-const mapStateToProps = ({currentLocation}) => {
+const mapStateToProps = ({localRestaurants}) => {
   return {
-    restaurants: currentLocation
+    restaurants: localRestaurants
   };
 };
 

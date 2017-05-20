@@ -7,13 +7,24 @@ class CityRestaurants extends React.Component {
   }
 
   componentDidMount() {
-    this.props.requestLocation(this.props.match.params.id)
+    this.props.requestLocation(this.props.match.params.id);
   }
+
+  localEats() {
+    const restaurants = this.props.restaurants;
+    return Object.keys(restaurants).forEach((restaurant, idx) => {
+      return <li key="idx">restaurant</li>;
+    });
+  }
+
 
   render() {
     return (
-      <div>city index</div>
-    )
+      <div>
+        {this.localEats()}
+
+      </div>
+    );
   }
 
 }

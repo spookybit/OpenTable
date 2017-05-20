@@ -34,4 +34,18 @@ class Restaurant < ApplicationRecord
       time.to_s + " AM"
     end
   end
+
+  def close_time
+    time = self.hours[4..7].to_i
+    if time > 1200
+      time -= 1200
+      time.to_s + " PM"
+    elsif time < 100
+      time += 1200
+      time.to_s + " AM"
+    else
+      time.to_s + " AM"
+    end
+  end
+  
 end
