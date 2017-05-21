@@ -36,10 +36,12 @@ class Heading extends React.Component {
       <div className="dropdown">
         <button className="dropdown-button">Choose your location</button>
         <div className="dropdown-content">
-          <Link to="j">Tokyo</Link>
-          <Link to="s">San Francisco</Link>
-          <Link to="n">New York</Link>
-          <Link to="p">Paris</Link>
+          <Link to="Tokyo">Tokyo</Link>
+          <Link to="San Francisco">San Francisco</Link>
+          <Link to="Los Angeles">Los Angeles</Link>
+          <Link to="New York">New York</Link>
+          <Link to="Seattle">Seattle</Link>
+          <Link to="Austin">Austin</Link>
         </div>
       </div>
     );

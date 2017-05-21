@@ -7,36 +7,46 @@ class HomeIndex extends React.Component {
   }
 
   componentDidMount() {
-    debugger;
     this.props.allLocations();
   }
 
   citiesList() {
     const cities = this.props.cities;
     return cities.map((city, idx) => {
-      return <Link to={`/${city.location}`} key={idx}>{city.location}</Link>;
+      return <Link to={`${city.location}`} key={idx}>{city.location}</Link>;
     });
   }
 
   citiesPhoto() {
     const cities = this.props.cities;
     return cities.map((city, idx) => {
-      return <img src={city.img_url} key={idx} />;
+      return (
+        <Link to={`${city.location}`} key={idx} className="indexCityBackground">
+          <img src={city.img_url} key={idx} />
+          <p>{city.location}</p>
+        </Link>
+      );
     });
   }
 
 
   render() {
     return (
-      <div>
-        <div className="indexPhotos">
-          {this.citiesPhoto()}
+      <div className="indexMain">
+        <img src="http://res.cloudinary.com/drgxeu7sx/image/upload/v1495323223/index-header_rnrgje.jpg" />
+
+        <div className="featured">
+          <h2>Featured cities</h2>
+          <div className="indexPhotos">
+            {this.citiesPhoto()}
+
+          </div>
+
+          <ul className="mainIndexList">
+            {this.citiesList()}
+          </ul>
 
         </div>
-
-        <ul>
-          {this.citiesList()}
-        </ul>
       </div>
     );
   }

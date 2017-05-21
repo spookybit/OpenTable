@@ -10,12 +10,12 @@ User.destroy_all
 User1 = User.create(username: "demo", password: "password")
 
 Location.destroy_all
-Location1 = Location.create(location: "Tokyo", img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,q_100,w_260/v1495225011/jpic_jlk1pv.png")
-Location2 = Location.create(location: "San Francisco", img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,q_100,w_260/v1495225631/sfpic_aguiew.jpg")
-Location3 = Location.create(location: "Los Angeles", img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,q_100,w_260/v1495225635/LApic_mrjpeo.png")
-Location4 = Location.create(location: "New York", img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,q_100,w_260/v1495225637/ny_pic_dbmhun.png")
-Location5 = Location.create(location: "Seattle", img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,q_100,w_260/v1495225638/seattle_pic_vzizyc.png")
-Location6 = Location.create(location: "Austin", img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,q_100,w_260/v1495225640/Austin_ul9gxf.png")
+Location1 = Location.create(location: "Tokyo", img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,q_100,w_300/v1495225011/jpic_jlk1pv.png")
+Location2 = Location.create(location: "San Francisco", img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,q_100,w_300/v1495225631/sfpic_aguiew.jpg")
+Location3 = Location.create(location: "Los Angeles", img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,q_100,w_300/v1495225635/LApic_mrjpeo.png")
+Location4 = Location.create(location: "New York", img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,q_100,w_300/v1495225637/ny_pic_dbmhun.png")
+Location5 = Location.create(location: "Seattle", img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,q_100,w_300/v1495225638/seattle_pic_vzizyc.png")
+Location6 = Location.create(location: "Austin", img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,q_100,w_300/v1495225640/Austin_ul9gxf.png")
 
 Restaurant.destroy_all
 Restaurant1 = Restaurant.create(name: "McDonalds", location_id: Location1.id,

@@ -12,9 +12,11 @@ class CityRestaurants extends React.Component {
 
   localEats() {
     const restaurants = this.props.restaurants;
-    return Object.keys(restaurants).forEach((restaurant, idx) => {
-      return <li key="idx">restaurant</li>;
+
+    return Object.keys(restaurants).map((key, idx) => {
+      return <p key={idx}>{restaurants[key].name}</p>;
     });
+
   }
 
 
