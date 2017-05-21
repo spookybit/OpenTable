@@ -36,12 +36,12 @@ class Heading extends React.Component {
       <div className="dropdown">
         <button className="dropdown-button">Choose your location</button>
         <div className="dropdown-content">
-          <Link to="Tokyo">Tokyo</Link>
-          <Link to="San Francisco">San Francisco</Link>
-          <Link to="Los Angeles">Los Angeles</Link>
-          <Link to="New York">New York</Link>
-          <Link to="Seattle">Seattle</Link>
-          <Link to="Austin">Austin</Link>
+          <Link to="/Tokyo">Tokyo</Link>
+          <Link to="/San Francisco">San Francisco</Link>
+          <Link to="/Los Angeles">Los Angeles</Link>
+          <Link to="/New York">New York</Link>
+          <Link to="/Seattle">Seattle</Link>
+          <Link to="/Austin">Austin</Link>
         </div>
       </div>
     );
@@ -66,8 +66,8 @@ class Heading extends React.Component {
       <div className="userDropdown">
         <button className="user-dropdown-button">Hi, {currentUser.username}</button>
         <div className="user-dropdown-content">
-          <Link to="j">Reservations</Link>
-          <Link to="s">Favorites</Link>
+          <Link to="/j">Reservations</Link>
+          <Link to="/s">Favorites</Link>
 
         </div>
       </div>

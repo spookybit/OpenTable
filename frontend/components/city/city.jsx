@@ -12,6 +12,12 @@ class CityRestaurants extends React.Component {
     this.props.requestLocation(this.props.match.params.id);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.city !== this.props.city && nextProps.city !== undefined) {
+      this.props.requestLocation(nextProps.city);
+    }
+  }
+
   localEats() {
     const restaurants = this.props.restaurants;
 
