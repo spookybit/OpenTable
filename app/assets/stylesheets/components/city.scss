@@ -1,0 +1,17 @@
+.localRestaurantsIndexItem {
+  display: flex;
+  justify-content: space-between;
+  background-color: red;
+  padding-top: 30px;
+
+}
+
+.localRestaurantsIndexItem img {
+  max-width: 250px;
+  max-height: 140px;
+}
+
+.localRestaurantsIndexItem div {
+  display: flex;
+  justify-content: flex-start;
+}

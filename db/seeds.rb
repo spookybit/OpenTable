@@ -19,10 +19,10 @@ Location6 = Location.create(location: "Austin", img_url: "http://res.cloudinary.
 
 Restaurant.destroy_all
 Restaurant1 = Restaurant.create(name: "McDonalds", location_id: Location1.id,
- rating: 5, price: 1, hours: "000024000", description: "The best place ever!", img_url: "blank")
+ rating: 5, price: 1, hours: "000024000", description: "The best place ever!", img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,q_100,w_250/v1495338000/mcdonalds_js83ta.jpg")
 
 Restaurant2 = Restaurant.create(name: "Starbucks", location_id: Location1.id,
-  rating: 5, price: 1, hours: "000024000", description: "Coffee shop", img_url: "blank")
+  rating: 5, price: 1, hours: "000024000", description: "Coffee shop", img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/q_100/v1495340043/starbucks_ncuvry.jpg")
 
 Restaurant3 = Restaurant.create(name: "Little Luccas", location_id: Location2.id,
   rating: 5, price: 2, hours: "08301730", description: "Subs", img_url: "blank")
