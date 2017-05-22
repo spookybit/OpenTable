@@ -11,6 +11,22 @@ class Restaurant extends React.Component {
     this.props.showRestaurant(this.props.match.params.id);
   }
 
+  reviewsList() {
+    const reviews = this.props.restaurant.reviews;
+    if (reviews !== undefined) {
+      return reviews.map((review, idx) => {
+        return (
+          <div key={idx}>
+            <li>Date visited: {review.date_visited}</li>
+            <li>{review.description}</li>
+            <li>{review.rating}</li>
+          </div>
+        );
+      });
+    }
+
+  }
+
   render() {
     const {restaurant} = this.props;
     return (
@@ -39,7 +55,7 @@ class Restaurant extends React.Component {
         </div>
 
         <div className="restReviews">
-          
+          {this.reviewsList()}
         </div>
 
       </div>
