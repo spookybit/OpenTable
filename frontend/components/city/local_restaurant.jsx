@@ -16,8 +16,9 @@ class LocalRestaurant extends React.Component {
 
   render () {
     const { restaurant } = this.props;
+
     return (
-      <Link to={`/restaurant/${restaurant.name}`} className="localRestaurantsIndexItem">
+      <Link to={`/restaurant/${restaurant.name}/${restaurant.id}`} className="localRestaurantsIndexItem">
         <div className="cityIndexRow">
           <div className="localRestIdxImg">
             <img src={restaurant.img_url} />

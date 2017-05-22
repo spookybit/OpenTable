@@ -9,6 +9,7 @@ import {AuthRoute} from '../util/route_util';
 import HeadingContainer from './heading/heading_container';
 import SessionFormContainer from './session_form/session_form_container';
 import HomeIndexContainer from './home_index/home_index_container';
+import RestaurantContainer from './restaurant/restaurant_container';
 
 import CityContainer from './city/city_container';
 
@@ -16,6 +17,7 @@ const App = () => (
   <div>
     <HeadingContainer />
     <Switch>
+      <Route exact path="/restaurant/:name/:id" component={RestaurantContainer} />
       <Route exact path="/:id" component={CityContainer} />
       <Route path="/" component={HomeIndexContainer} />
     </Switch>
