@@ -47,5 +47,13 @@ class Restaurant < ApplicationRecord
       time.to_s + " AM"
     end
   end
-  
+
+  def moneys
+    dollars = ""
+    self.rating.times do
+      dollars += "$"
+    end
+    dollars
+  end
+
 end

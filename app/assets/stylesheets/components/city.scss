@@ -1,9 +1,56 @@
+.cityIdxMain {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #F6F5F5;
+  font-size: 25px;
+}
+
+.cityIdxMain p {
+  padding-bottom: 5px;
+  border-bottom: black;
+  border-bottom-style: solid;
+  border-color: #F6F5F5;
+  border-width: 1px;
+  margin: 2px;
+  padding-left: 15px;
+}
+
+.localRestaurantsIndexContainer {
+  border-radius: 25px;
+  padding-top: 15px;
+  max-width: 900px;
+  background-color: white;
+  margin-left: 15px;
+}
+
+.localRestaurantsIndexContainer p {
+  padding-left: 15px;
+}
+
 .localRestaurantsIndexItem {
   display: flex;
-  justify-content: space-between;
-  background-color: red;
-  padding-top: 30px;
+  // justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid #F6F5F5;
+  border-width: 2px;
+}
 
+.cityIndexRow {
+  // background-color: pink;
+  margin: 5px;
+  width: 100%;
+  font-size: 18px;
+}
+
+.cityIndexRow div {
+  display: flex;
+  flex-direction: column;
+  background-color: yellow;
+}
+
+.cityIndexAbout {
+  padding-left: 10px;
+  padding-right: 50px;
 }
 
 .localRestaurantsIndexItem img {
@@ -14,4 +61,5 @@
 .localRestaurantsIndexItem div {
   display: flex;
   justify-content: flex-start;
+  margin-left: 10px;
 }

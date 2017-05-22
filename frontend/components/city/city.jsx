@@ -29,11 +29,15 @@ class CityRestaurants extends React.Component {
 
 
   render() {
-    const location = this.props.match.url.slice(1);
+    // const location = this.props.match.url.slice(1);
     return (
-      <div>
-        {location}
-        {this.localEats()}
+      <div className="cityIdxMain">
+        <img src="http://res.cloudinary.com/drgxeu7sx/image/upload/v1495323223/index-header_rnrgje.jpg" />
+        <p>Treat your tastebuds: Explore {this.props.city} restaurants</p>
+        <div className="localRestaurantsIndexContainer">
+          <p>Local Restaurants</p>
+          {this.localEats()}
+        </div>
 
       </div>
     );

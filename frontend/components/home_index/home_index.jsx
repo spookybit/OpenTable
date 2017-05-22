@@ -13,7 +13,7 @@ class HomeIndex extends React.Component {
   citiesList() {
     const cities = this.props.cities;
     return cities.map((city, idx) => {
-      return <Link to={`${city.location}`} key={idx}>{city.location}</Link>;
+      return <Link to={`/${city.location}`} key={idx}>{city.location}</Link>;
     });
   }
 
