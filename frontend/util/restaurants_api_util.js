@@ -13,13 +13,9 @@ export const allRestaurants = () => (
   })
 );
 
-
-// ???????????
-
-//
-// export const localRestaurants = (locationId) => (
-//   $.ajax({
-//     method: 'SHOW',
-//     url: 'api/locations'
-//   })
-// );
+export const showRestaurant = (restaurantId) => (
+  $.ajax({
+    method: 'GET',
+    url: `/api/restaurants/${restaurantId}`
+  })
+);

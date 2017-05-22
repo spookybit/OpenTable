@@ -6,10 +6,7 @@ import Modal from 'react-modal';
 import configureStore from './store/store';
 import Root from './components/root';
 
-import { login, logout, signup } from './actions/session_actions';
-import { clearErrors } from './actions/session_actions';
-
-import { currentLocation, allLocations } from './actions/location_actions';
+import { showRestaurant } from './actions/restaurant_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -24,10 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
 
-  window.currentLocation = currentLocation;
-  window.allLocations = allLocations;
-
-  window.clearErrors = clearErrors;
+  window.showRestaurant = showRestaurant;
   window.store = store;
 
   ReactDOM.render(<Root store={store} />, root);
