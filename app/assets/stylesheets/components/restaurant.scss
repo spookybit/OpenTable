@@ -1,0 +1,68 @@
+.restaurant {
+  background-color: #F6F5F5;
+  height: 90vh;
+}
+
+.restHeader {
+  display: flex;
+  flex-direction: row;
+  background-color: purple;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.restHeader img {
+  max-width: 250px;
+  max-height: 140px;
+  padding: 0px 20px 0px 20px;
+  border-radius: 50px;
+}
+
+.restHeaderText {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.restHeaderText h1 {
+  font-size: 40px;
+}
+
+.restHeaderHours {
+  display: flex;
+  flex-direction: row;
+}
+
+.restHeaderHours li {
+  margin-right: 4px;
+}
+
+.restDescription {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  padding-top: 15px;
+  max-width: 900px;
+  background-color: white;
+  margin-left: 15px;
+  margin-bottom: 25px;
+
+}
+
+.restDescription p {
+  font-size: 25px;
+  padding: 10px 0px 10px 15px;
+  border-bottom: black;
+  border-bottom-style: solid;
+  border-color: #F6F5F5;
+  border-width: 1px;
+  margin: 2px;
+  padding-left: 15px;
+}
+
+.restDescription div {
+  padding: 20px 20px 20px 15px;
+}

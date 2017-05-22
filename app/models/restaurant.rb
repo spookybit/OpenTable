@@ -56,4 +56,15 @@ class Restaurant < ApplicationRecord
     dollars
   end
 
+  def average_rating
+    rating = self.reviews.pluck(:rating)
+    total = 0
+    if !rating.empty?
+      rating.each { |rate| total += rate}
+      total.fdiv(rating.count).round(2)
+    else
+      return "no ratings"
+    end
+  end
+
 end
