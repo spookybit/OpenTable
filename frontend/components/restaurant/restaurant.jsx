@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ReviewListItem from '../review/review_list_item';
 
 class Restaurant extends React.Component {
   constructor(props) {
@@ -16,15 +16,10 @@ class Restaurant extends React.Component {
     if (reviews !== undefined) {
       return reviews.map((review, idx) => {
         return (
-          <div key={idx}>
-            <li>Date visited: {review.date_visited}</li>
-            <li>{review.description}</li>
-            <li>{review.rating}</li>
-          </div>
+          <ReviewListItem key={idx} review={review} />
         );
       });
     }
-
   }
 
   render() {
