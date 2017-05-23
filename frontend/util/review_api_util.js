@@ -1,7 +1,7 @@
-export const makeReview = (restaurantId, review) => (
+export const makeReview = (review) => (
   $.ajax({
     method: 'POST',
-    url: `/api/restaurants/${restaurantId}/reviews`,
+    url: `/api/restaurants/${review.restaurant_id}/reviews`,
     data: {review}
   })
 );

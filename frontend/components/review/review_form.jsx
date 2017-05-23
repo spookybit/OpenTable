@@ -26,8 +26,7 @@ class ReviewForm extends React.Component {
       restaurant_id: restaurant.id, rating: parseInt(this.state.rating),
       date_visited: this.state.date_visited,
       description: this.state.description};
-    console.log(review);
-    this.props.postReview(restaurant.id, review);
+    this.props.postReview(review);
   }
 
   render () {

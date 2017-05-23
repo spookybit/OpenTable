@@ -9,7 +9,7 @@ const mapStateToProps = ({session}, ownProps) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  postReview: (restaurant_id, review) => dispatch(postReview(restaurant_id, review))
+  postReview: (review) => dispatch(postReview(review))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ReviewForm);

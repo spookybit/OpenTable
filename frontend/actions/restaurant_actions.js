@@ -19,9 +19,9 @@ export const showRestaurant = restaurantId => dispatch=> (
     .then(data => (dispatch(receiveRestaurant(data))))
 );
 
-export const postReview = (restaurant_id, review) => dispatch => (
-  makeReview(restaurant_id, review)
-    .then(() => (dispatch(receiveRestaurant(restaurant_id)))
+export const postReview = (review) => dispatch => (
+  makeReview(review)
+    .then((data) => (dispatch(receiveRestaurant(data)))
     // , err => (
     //   dispatch(receiveFormErrors(err.responseJSON))
     // )
