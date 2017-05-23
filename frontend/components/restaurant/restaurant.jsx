@@ -22,6 +22,14 @@ class Restaurant extends React.Component {
     }
   }
 
+  reviewForm() {
+    if (this.props.currentUser) {
+      return <ReviewFormContainer restaurant={this.props.restaurant}/>;
+    } else {
+      return "Please sign in to make a review";
+    }
+  }
+
   render() {
     const {restaurant} = this.props;
     return (
@@ -51,7 +59,7 @@ class Restaurant extends React.Component {
 
         <div className="restReviews">
           <p>{restaurant.name} Ratings and Reviews</p>
-          <ReviewFormContainer restaurant={this.props.restaurant}/>
+          {this.reviewForm()}
           <div className="reviewList">
             {this.reviewsList()}
           </div>

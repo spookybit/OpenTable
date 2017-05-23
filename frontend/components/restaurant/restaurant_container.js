@@ -2,9 +2,10 @@ import { connect } from 'react-redux';
 import Restaurant from './restaurant';
 import { showRestaurant } from '../../actions/restaurant_actions';
 
-const mapStateToProps = ({currentRestaurant}) => {
+const mapStateToProps = ({currentRestaurant, session}) => {
   return {
-    restaurant: currentRestaurant
+    restaurant: currentRestaurant,
+    currentUser: session.currentUser
   };
 };
 
