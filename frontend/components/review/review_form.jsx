@@ -7,7 +7,8 @@ class ReviewForm extends React.Component {
     this.state = {
       description: "",
       rating: 0,
-      date_visited: 0
+      date_visited: 0,
+      formErrors: ""
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -19,19 +20,80 @@ class ReviewForm extends React.Component {
     });
   }
 
+  currentDate () {
+    let time = new Date();
+
+    let zero = "0";
+    let year = time.getFullYear().toString();
+
+    let month = time.getMonth();
+    month = month + 1;
+    month = month.toString();
+    if (month.length === 1) {
+      month = zero.concat(month);
+    }
+
+    let day = time.getDate().toString();
+    if (day.length === 1) {
+      day = zero.concat(day);
+    }
+
+    return `${year}-${month}-${day}`;
+  }
+
+  checkValidDate(date) {
+    let current = this.currentDate();
+    current = current.slice(0, 4).concat(current.slice(5, 7)).concat(current.slice(8));
+    current = parseInt(current);
+
+    let entry = date.slice(0, 4).concat(date.slice(5, 7)).concat(date.slice(8));
+    entry = parseInt(entry);
+
+    if (current >= entry) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   handleSubmit(e) {
     e.preventDefault;
     const {restaurant} = this.props;
-    const review = {user_id: this.props.currentUserId,
-      restaurant_id: restaurant.id, rating: parseInt(this.state.rating),
+    const review = {
+      user_id: this.props.currentUserId,
+      restaurant_id: restaurant.id,
+      rating: parseInt(this.state.rating),
       date_visited: this.state.date_visited,
       description: this.state.description};
-    this.props.postReview(review);
+
+    if (this.state.date_visited !== 0
+      && this.state.rating !== 0
+      && this.state.description !== ""
+      && this.checkValidDate(this.state.date_visited))
+      {
+        this.props.postReview(review);
+        const form = document.getElementById("reviewForm");
+        form.reset();
+        this.setState ({
+          description: "",
+          rating: 0,
+          date_visited: 0,
+          formErrors: ""
+      });
+    } else {
+      this.setState({formErrors: "Please fill out all fields"});
+    }
+  }
+
+  formErrors() {
+    return this.state.formErrors;
   }
 
   render () {
+
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form id="reviewForm" onSubmit={this.handleSubmit}>
+        {this.formErrors()}
         <input type="text"
           placeholder="Share your thoughts"
           value={this.state.description}
@@ -45,7 +107,7 @@ class ReviewForm extends React.Component {
           <option>4</option>
           <option>5</option>
         </select>
-        <input type="date" onChange={this.update('date_visited')}/>
+        <input type="date" max={this.currentDate()} onChange={this.update('date_visited')}/>
       </form>
     );
   }
