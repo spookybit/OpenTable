@@ -1,10 +1,10 @@
 import React from 'react';
 import ReviewListItem from '../review/review_list_item';
+import ReviewFormContainer from '../review/review_form_container';
 
 class Restaurant extends React.Component {
   constructor(props) {
     super(props);
-
   }
 
   componentDidMount() {
@@ -50,7 +50,11 @@ class Restaurant extends React.Component {
         </div>
 
         <div className="restReviews">
-          {this.reviewsList()}
+          <p>{restaurant.name} Ratings and Reviews</p>
+          <ReviewFormContainer restaurant={this.props.restaurant}/>
+          <div className="reviewList">
+            {this.reviewsList()}
+          </div>
         </div>
 
       </div>

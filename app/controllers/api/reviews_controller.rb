@@ -3,15 +3,15 @@ class Api::ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     if @review.save
-      render 'api/reviews/show'
+      render 'api/restaurant/show'
     else
-      render json: @reviews.errors.full_messages, status: 422
+      render json: @review.errors.full_messages, status: 422
     end
   end
 
-  def show
-    @review = Review.find(params[:id])
-  end
+  # def show
+  #   @review = Review.find(params[:id])
+  # end
 
   private
   def review_params

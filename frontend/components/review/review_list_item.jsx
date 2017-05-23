@@ -9,10 +9,13 @@ class ReviewListItem extends React.Component {
   render() {
     const {review} = this.props;
     return (
-      <div>
-        <li>Date visited: {review.date_visited}</li>
+      <div className="reviewListItem">
+        <div className="reviewListItemHeader">
+          <li>Reviewed by: {review.username}</li>
+          <li>Rating: {review.rating}</li>
+          <li>Date visited: {review.date_visited}</li>
+        </div>
         <li>{review.description}</li>
-        <li>Rating: {review.rating}</li>
       </div>
     );
   }

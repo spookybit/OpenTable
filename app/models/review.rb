@@ -18,4 +18,9 @@ class Review < ApplicationRecord
 
   belongs_to :user
   belongs_to :restaurant
+
+  def date
+    date = self.date_visited
+    date[5..6] + "/" + date[8..9] + "/" + date[0..3]
+  end
 end

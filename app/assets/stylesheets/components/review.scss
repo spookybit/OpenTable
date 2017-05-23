@@ -1,0 +1,29 @@
+.restReviews {
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  padding-top: 15px;
+  max-width: 900px;
+  background-color: white;
+  margin-left: 15px;
+}
+
+.restReviews p {
+  font-size: 25px;
+  padding: 15px;
+}
+
+.reviewListItem {
+  padding: 15px 15px 15px 15px;
+}
+
+.reviewListItemHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.reviewListItemHeader li {
+  margin-right: 20px;
+  margin-bottom: 13px;
+}
