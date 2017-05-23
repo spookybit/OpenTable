@@ -108,6 +108,7 @@ class ReviewForm extends React.Component {
           <option>5</option>
         </select>
         <input type="date" max={this.currentDate()} onChange={this.update('date_visited')}/>
+        <input type="submit" value="Submit" />
       </form>
     );
   }
