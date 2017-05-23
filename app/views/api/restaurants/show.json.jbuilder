@@ -1,4 +1,4 @@
-json.partial! 'restaurant', restaurant: @restaurant
+json.partial! "api/restaurants/restaurant", restaurant: @restaurant
 
 json.reviews @restaurant.reviews do |rev|
   json.username rev.user.username

@@ -3,7 +3,7 @@ class Api::ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     if @review.save
-      render 'api/restaurant/show'
+      render 'api/restaurants/show'
     else
       render json: @review.errors.full_messages, status: 422
     end
