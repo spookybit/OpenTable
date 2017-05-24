@@ -34,21 +34,27 @@ class SearchBar extends React.Component {
   render () {
     return (
       <form className="searchForm" onSubmit={this.handleSubmit}>
-        <input type="text"
-          placeholder="Restaurant name"
-          value={this.state.restaurantName}
-          onChange={this.update('restaurantName')}
-          />
-        <select className="searchCityDrop" onChange={this.update('location_id')}>
-          <option disabled selected>City</option>
-          <option value="1">Tokyo</option>
-          <option value="2">San Francisco</option>
-          <option value="3">Los Angeles</option>
-          <option value="4">New York</option>
-          <option value="5">Seattle</option>
-          <option value="6">Austin</option>
-        </select>
-        <input className="searchCityClick" type="submit" value="Submit" />
+        <div className="searchFormHeading">
+          Make restaurant reservations the easy way
+        </div>
+        <div className="searchBar">
+          <input type="text"
+            placeholder="Restaurant name"
+            value={this.state.restaurantName}
+            onChange={this.update('restaurantName')}
+            />
+          <select defaultValue="City" className="searchCityDrop" onChange={this.update('location_id')}>
+            <option disabled>City</option>
+            <option value="1">Tokyo</option>
+            <option value="2">San Francisco</option>
+            <option value="3">Los Angeles</option>
+            <option value="4">New York</option>
+            <option value="5">Seattle</option>
+            <option value="6">Austin</option>
+          </select>
+          <input className="formClick" type="submit" value="Submit" />
+
+        </div>
       </form>
     );
   }

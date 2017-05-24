@@ -1,26 +1,26 @@
 input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 3px solid #ccc;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    outline: none;
-    max-width: 400px;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  // max-width: 400px;
+
 }
 
 .searchCityDrop {
-  border: 2px solid #ccc;
+  border: none;
   width: 90px;
   height: 47px;
-  // border-radius: 3px;
+  margin-top: 8px;
   overflow: hidden;
   font-size: 15px;
 }
 
-.searchCityClick {
-  background-color: #4CAF50; /* Green */
+.formClick {
   border: none;
   color: white;
   padding: 12px 32px;
@@ -28,24 +28,39 @@ input[type=text] {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
-  -webkit-transition-duration: 0.4s; /* Safari */
+  -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
   cursor: pointer;
-  background-color: white;
-  color: black;
-  border: 2px solid #ccc;
+  background-color: #DB0101;
+  color: white;
+  // border: 1px solid #ccc;
 }
 
-.searchCityClick:hover {
-  background-color: #ccc;
+.formClick:hover {
+  background-color: #A60000;
   color: white;
 }
 
 .searchForm {
-  margin-top: 20px;
+  margin: 20px 3vw 20px 25px;
   display: flex;
   justify-content: center;
-  border: 2px solid #ccc;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  max-width: 876px;
+  border-radius: 2px;
 
+}
+
+.searchFormHeading {
+  margin: 15px 0px;
+  margin-bottom: 9px;
+  font-size: 31px;
+  margin-left: 20px
+}
+
+.searchBar {
+  margin: 10px 20px 20px 20px;
+  border: 1px solid #ccc;
+  display: flex;
 }

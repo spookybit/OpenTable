@@ -99,16 +99,16 @@ class ReviewForm extends React.Component {
           value={this.state.description}
           onChange={this.update('description')}
           />
-        <select onChange={this.update('rating')}>
-          <option disabled selected>rating</option>
+        <select defaultValue="Rating" className="searchCityDrop" onChange={this.update('rating')}>
+          <option disabled>Rating</option>
           <option>1</option>
           <option>2</option>
           <option>3</option>
           <option>4</option>
           <option>5</option>
         </select>
-        <input type="date" max={this.currentDate()} onChange={this.update('date_visited')}/>
-        <input type="submit" value="Submit" />
+        <input type="date" className="formClick calendar" max={this.currentDate()} onChange={this.update('date_visited')}/>
+        <input type="submit" className="formClick formReviewClick" value="Submit" />
       </form>
     );
   }
