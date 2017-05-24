@@ -30,14 +30,20 @@ class Restaurant < ApplicationRecord
 
   def open_time
     time = self.hours[0..3].to_i
-    if time > 1200
-      time -= 1200
+    if time == 1200
       time = time.to_s
       time[0..1] + ":" + time[2..3] + " PM"
+    elsif time > 1200
+      time -= 1200
+      time = time.to_s
+      "0" + time[0] + ":" + time[1..2] + " PM"
     elsif time < 100
       time += 1200
       time = time.to_s
-      time[0..1] + ":" + time[2..3] + " PM"
+      time[0..1] + ":" + time[2..3] + " AM"
+    elsif time < 1200 && time >= 1000
+      time = time.to_s
+      time[0..1] + ":" + time[2..3] + " AM"
     else
       time = time.to_s
       "0" + time[0] + ":" + time[1..2] + " AM"
@@ -46,14 +52,21 @@ class Restaurant < ApplicationRecord
 
   def close_time
     time = self.hours[4..7].to_i
-    if time > 1200
+    if time == 2400
       time -= 1200
       time = time.to_s
-      time[0..1] + ":" + time[2..3] + " PM"
+      time[0..1] + ":" + time[2..3] + " AM"
+    elsif time > 1200
+      time -= 1200
+      time = time.to_s
+      "0" + time[0] + ":" + time[1..2] + " PM"
     elsif time < 100
       time += 1200
       time = time.to_s
       time[0..1] + ":" + time[2..3] + " PM"
+    elsif time < 1200 && time >= 1000
+      time = time.to_s
+      time[0..1] + ":" + time[2..3] + " AM"
     else
       time = time.to_s
       "0" + time[0] + ":" + time[1..2] + " AM"

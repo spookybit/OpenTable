@@ -15,7 +15,7 @@
 class Review < ApplicationRecord
   validates :user_id, :restaurant_id, :rating, :date_visited, :description, presence: true
   validates_numericality_of :rating, only_integer: true
-
+  validates_uniqueness_of :user_id, :scope => :restaurant_id
 
   belongs_to :user
   belongs_to :restaurant

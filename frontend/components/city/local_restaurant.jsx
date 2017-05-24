@@ -27,7 +27,7 @@ class LocalRestaurant extends React.Component {
           <ul className="cityIndexAbout">
             <li>{restaurant.name}</li>
             <li>Price: {this.moneys(restaurant.price)}</li>
-            <li>Rating: {restaurant.rating}</li>
+            <li>Rating: {restaurant.average_rating}</li>
           </ul>
 
           <ul className="cityIndexHours">
