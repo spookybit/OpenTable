@@ -14,12 +14,6 @@
 #
 
 class Restaurant < ApplicationRecord
-  include PgSearch
-  pg_search_scope :search_by_name, :against => :name, :using => {:tsearch => {:prefix => true}}
-  pg_search_scope :search_by_location, :associated_against => {
-    :location => :name
-  }
-
   validates :name, :location_id, :price, :hours, presence: true
   # validates :hours, numericality: true, length: {is: 8}
 
@@ -91,5 +85,7 @@ class Restaurant < ApplicationRecord
       return "no ratings"
     end
   end
+
+
 
 end

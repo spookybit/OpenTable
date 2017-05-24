@@ -222,3 +222,13 @@ Review12 = Review.create(user_id: User6.id, restaurant_id: Restaurant7.id,
   rating: 4, date_visited: "2017-01-01", description: "It was great")
 Review13 = Review.create(user_id: User7.id, restaurant_id: Restaurant8.id,
   rating: 5, date_visited: "2017-03-30", description: "It was great")
+
+
+Favorite.destroy_all
+Favorite1 = Favorite.create(user_id: 1, restaurant_id: 1)
+Favorite2 = Favorite.create(user_id: 1, restaurant_id: 4)
+Favorite3 = Favorite.create(user_id: 1, restaurant_id: 6)
+Favorite4 = Favorite.create(user_id: 1, restaurant_id: 11)
+Favorite5 = Favorite.create(user_id: 2, restaurant_id: 1)
+Favorite6 = Favorite.create(user_id: 5, restaurant_id: 1)
+Favorite7 = Favorite.create(user_id: 6, restaurant_id: 4)

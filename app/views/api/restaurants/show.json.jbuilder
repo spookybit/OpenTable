@@ -1,5 +1,7 @@
 json.partial! "api/restaurants/restaurant", restaurant: @restaurant
 
+json.followed @followed
+
 json.reviews @restaurant.reviews do |rev|
   json.username rev.user.username
   json.restaurant rev.restaurant.name
