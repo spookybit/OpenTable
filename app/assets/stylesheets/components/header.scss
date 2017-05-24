@@ -6,6 +6,11 @@
   padding-bottom: 10px;
 }
 
+.logoheader {
+  max-width: 30px;
+  max-height: 30px;
+}
+
 .header button {
   background-color: #237B98;
   color: white;
@@ -48,6 +53,11 @@
 .dropdown-content Link {
   display: block;
 }
+
+// .headerleft {
+//   display: flex;
+//   flex-direction: row
+// }
 
 .userOptions {
   display: flex;

@@ -16,8 +16,13 @@ class SearchPage extends React.Component {
   }
 
   render() {
+    // debugger;
+    const search = this.props.location.pathname.slice(8);
     return (
       <div>
+        <div>
+          Search Results for {`${search}`}
+        </div>
         {this.searchEats()}
       </div>
     );

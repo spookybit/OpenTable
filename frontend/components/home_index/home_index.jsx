@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import SearchContainer from '../search/search_container';
 
 class HomeIndex extends React.Component {
   constructor(props) {
@@ -34,7 +35,7 @@ class HomeIndex extends React.Component {
     return (
       <div className="indexMain">
         <img src="http://res.cloudinary.com/drgxeu7sx/image/upload/v1495323223/index-header_rnrgje.jpg" />
-
+        <SearchContainer />
         <div className="featured">
           <h2>Featured cities</h2>
           <div className="indexPhotos">

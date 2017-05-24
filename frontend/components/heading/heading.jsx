@@ -51,7 +51,10 @@ class Heading extends React.Component {
   sessionLinks () {
     return (
       <nav className="header">
-        {this.dropdownLocations()}
+        <div className="headerLeft">
+          <img src="http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,w_256/v1495602139/munchk_logo_ms6dmf.png" className="logoheader"/>
+          {this.dropdownLocations()}
+        </div>
         <div>
           <button onClick={this.openModal("login")}>Login</button>
           <button onClick={this.openModal("sign up")}>Sign Up</button>

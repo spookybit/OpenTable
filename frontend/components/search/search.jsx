@@ -26,29 +26,29 @@ class SearchBar extends React.Component {
       }
     };
     this.props.makeSearch(search);
-    
-    this.props.history.push("/search");
+
+    this.props.history.push(`/search/${this.state.restaurantName}`);
   }
 
 
   render () {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className="searchForm" onSubmit={this.handleSubmit}>
         <input type="text"
           placeholder="Restaurant name"
           value={this.state.restaurantName}
           onChange={this.update('restaurantName')}
           />
-        <select onChange={this.update('location_id')}>
+        <select className="searchCityDrop" onChange={this.update('location_id')}>
           <option disabled selected>City</option>
-          <option value="1">Japan</option>
+          <option value="1">Tokyo</option>
           <option value="2">San Francisco</option>
           <option value="3">Los Angeles</option>
           <option value="4">New York</option>
           <option value="5">Seattle</option>
           <option value="6">Austin</option>
         </select>
-        <input type="submit" value="Submit" />
+        <input className="searchCityClick" type="submit" value="Submit" />
       </form>
     );
   }

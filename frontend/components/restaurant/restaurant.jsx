@@ -1,6 +1,7 @@
 import React from 'react';
 import ReviewListItem from '../review/review_list_item';
 import ReviewFormContainer from '../review/review_form_container';
+import SearchContainer from '../search/search_container';
 
 class Restaurant extends React.Component {
   constructor(props) {
@@ -49,6 +50,8 @@ class Restaurant extends React.Component {
           </div>
 
         </div>
+
+        <SearchContainer />
 
         <div className="restDescription">
           <p>About {restaurant.name}</p>
