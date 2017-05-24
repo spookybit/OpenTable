@@ -2,12 +2,12 @@ import { searchRequest } from '../util/search_util';
 
 export const SEARCH = "SEARCH";
 
-export const receiveSearchResults = (search) => ({
+export const receiveSearchResults = (results) => ({
   type: SEARCH,
-  search
+  results
 });
 
-export const makeSearch = searchData => dispatch => (
-  searchRequest(searchData)
+export const makeSearch = search => dispatch => (
+  searchRequest(search)
     .then( data => dispatch(receiveSearchResults(data)))
 );

@@ -51,7 +51,7 @@ Restaurant10 = Restaurant.create(name: "Z & Y", location_id: Location5.id,
 Restaurant11 = Restaurant.create(name: "Kome", location_id: Location6.id,
   rating: 5, price: 1, hours: "10300830", description: "Grub dub here", img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,q_100,w_250/v1495338000/mcdonalds_js83ta.jpg")
 
-Restaurant12 = Restaurant.create(name: "Eatsa", location_id: Location6.id,
+Restaurant12 = Restaurant.create(name: "McDonalds", location_id: Location6.id,
   rating: 5, price: 1, hours: "10001700", description: "Cheap pizza", img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,q_100,w_250/v1495338000/mcdonalds_js83ta.jpg")
 
 Review.destroy_all

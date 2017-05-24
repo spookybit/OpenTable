@@ -1,12 +1,6 @@
 import {connect} from 'react-redux';
-import SearchBar from './searchbar';
-import makeSearch from '../../actions/search_actions';
-
-// const mapStateToProps = ({search}) => {
-//   return {
-//     searchList: search
-//   };
-// };
+import SearchBar from './search';
+import { makeSearch } from '../../actions/search_actions';
 
 const mapDispatchToProps = dispatch => {
   return {

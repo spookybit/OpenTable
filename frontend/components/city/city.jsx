@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import LocalRestaurant from './local_restaurant';
+import SearchContainer from '../search/search_container';
 
 class CityRestaurants extends React.Component {
   constructor(props) {
@@ -33,6 +34,7 @@ class CityRestaurants extends React.Component {
     return (
       <div className="cityIdxMain">
         <img src="http://res.cloudinary.com/drgxeu7sx/image/upload/v1495323223/index-header_rnrgje.jpg" />
+        <SearchContainer />
         <p>Treat your tastebuds: Explore {this.props.city} restaurants</p>
         <div className="localRestaurantsIndexContainer">
           <p>Local Restaurants</p>

@@ -13,4 +13,4 @@ const CurrentLocationReducer = (state = {}, action) => {
   }
 };
 
-export default CURRENT_LOCATION_SLICE;
+export default CurrentLocationReducer;

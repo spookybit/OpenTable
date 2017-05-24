@@ -6,13 +6,6 @@ export const newRestaurant = restaurant => (
   })
 );
 
-export const allRestaurants = () => (
-  $.ajax({
-    method: 'GET',
-    url: '/api/restaurants'
-  })
-);
-
 export const showRestaurant = (restaurantId) => (
   $.ajax({
     method: 'GET',

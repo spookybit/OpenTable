@@ -1,8 +1,12 @@
 class Api::RestaurantsController < ApplicationController
   def index
-    @restaurants = Restaurant.all
+    name = restaurant_params[:name]
+    location = restaurant_params[:location]
+    @restaurants = Location.find(restaurant_params[:location_id]).restaurants.where("LOWER(name) LIKE LOWER(?)", "%#{name}%")
+
     render :index
   end
+  # http://localhost:3000/api/restaurants?restaurant[name]=mcdon&restaurant[location_id]=1
 
   def create
     @restaurant = Restaurant.new(restaurant_params)
@@ -21,7 +25,7 @@ class Api::RestaurantsController < ApplicationController
 
   def restaurant_params
     params.require(:restaurant).permit(:id, :name, :location_id,
-      :rating, :price, :hours, :description)
+      :rating, :price, :hours, :description, :location)
   end
 
 end
