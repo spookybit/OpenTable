@@ -1,8 +1,15 @@
 class Api::RestaurantsController < ApplicationController
   def index
     name = restaurant_params[:name]
-    location = restaurant_params[:location]
-    @restaurants = Location.find(restaurant_params[:location_id]).restaurants.where("LOWER(name) LIKE LOWER(?)", "%#{name}%")
+    location = restaurant_params[:location_id]
+
+    if location != "0" && name
+      @restaurants = Location.find(restaurant_params[:location_id]).restaurants.where("LOWER(name) LIKE LOWER(?)", "%#{name}%")
+    elsif location != "0"
+      @restaurants = Location.find(restaurant_params[:location_id]).restaurants
+    else name
+      @restaurants = Restaurant.where("LOWER(name) LIKE LOWER(?)", "%#{name}%")
+    end
 
     render :index
   end

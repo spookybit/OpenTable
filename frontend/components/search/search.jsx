@@ -25,9 +25,10 @@ class SearchBar extends React.Component {
         name: this.state.restaurantName
       }
     };
-    this.props.makeSearch(search);
-
-    this.props.history.push(`/search/${this.state.restaurantName}`);
+    if (this.state.restaurantName !== "" || this.state.location_id !== 0) {
+      this.props.makeSearch(search);
+      this.props.history.push(`/search/${this.state.restaurantName}`);
+    }
   }
 
 
