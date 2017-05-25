@@ -27,6 +27,9 @@ class Restaurant extends React.Component {
 
 
   toggleFavorite() {
+    if (!this.props.currentUser) {
+      return null;
+    }
     const userId = this.props.currentUser.id;
     const locationId = this.props.restaurant.id;
     const fav = {user_id: `${userId}`, restaurant_id: `${locationId}`};
@@ -41,7 +44,12 @@ class Restaurant extends React.Component {
     if (this.props.currentUser) {
       return <ReviewFormContainer restaurant={this.props.restaurant}/>;
     } else {
-      return "Please sign in to make a review";
+      return (
+        <div className="ReviewFormErrors">
+          Please sign in to make a review
+        </div>
+
+      );
     }
   }
 
@@ -78,7 +86,9 @@ class Restaurant extends React.Component {
 
         <div className="restReviews">
           <p>{restaurant.name} Ratings and Reviews</p>
-          {this.reviewForm()}
+          <div className="reviewFormandErrors">
+            {this.reviewForm()}
+          </div>
           <div className="reviewList">
             {this.reviewsList()}
           </div>

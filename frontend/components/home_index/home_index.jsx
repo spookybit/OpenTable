@@ -37,7 +37,9 @@ class HomeIndex extends React.Component {
         <img src="http://res.cloudinary.com/drgxeu7sx/image/upload/v1495323223/index-header_rnrgje.jpg" />
         <SearchContainer />
         <div className="featured">
-          <h2>Featured cities</h2>
+          <div className="featuredHeader">
+            <h2>Featured cities</h2>
+          </div>
           <div className="indexPhotos">
             {this.citiesPhoto()}
 

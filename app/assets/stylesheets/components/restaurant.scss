@@ -1,16 +1,18 @@
 .restaurant {
   background-color: #F6F5F5;
   height: 90vh;
+  margin: auto;
 }
 
 .restHeader {
   display: flex;
   flex-direction: row;
   background-color: purple;
-  font-family: 'Source Sans Pro', sans-serif;
+  // font-family: 'Source Sans Pro', sans-serif;
   color: white;
   padding-top: 48px;
   padding-bottom: 48px;
+  // margin: auto;
 }
 
 .restHeader img {
@@ -49,7 +51,7 @@
   background-color: white;
   margin-left: 15px;
   margin-bottom: 25px;
-
+  margin: auto;
 }
 
 .restDescription p {
