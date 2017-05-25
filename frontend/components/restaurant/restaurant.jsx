@@ -6,6 +6,8 @@ import SearchContainer from '../search/search_container';
 class Restaurant extends React.Component {
   constructor(props) {
     super(props);
+
+    this.toggleFavorite = this.toggleFavorite.bind(this);
   }
 
   componentDidMount() {
@@ -23,6 +25,19 @@ class Restaurant extends React.Component {
     }
   }
 
+
+  toggleFavorite() {
+    // debugger;
+    const userId = this.props.currentUser.id;
+    const locationId = this.props.restaurant.id;
+    const fav = {user_id: `${userId}`, restaurant_id: `${locationId}`};
+    if (this.props.restaurant.favorited) {
+      this.props.deleteFavorite(userId, fav);
+    } else {
+      this.props.createFavorite(userId, fav);
+    }
+  }
+
   reviewForm() {
     if (this.props.currentUser) {
       return <ReviewFormContainer restaurant={this.props.restaurant}/>;
@@ -32,6 +47,7 @@ class Restaurant extends React.Component {
   }
 
   render() {
+
     const {restaurant} = this.props;
     return (
       <div className="restaurant">
@@ -40,6 +56,7 @@ class Restaurant extends React.Component {
 
           <div className="restHeaderText">
             <h1>{restaurant.name}</h1>
+            <div className="follow_button" onClick={this.toggleFavorite}>&lt;3</div>
             <div className="restHeaderHours">
               <li>Hours:</li>
               <li>{restaurant.open_time}-{restaurant.close_time}</li>

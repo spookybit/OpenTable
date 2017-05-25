@@ -7,6 +7,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 
 import { showRestaurant } from './actions/restaurant_actions';
+import { createFavorite, deleteFavorite } from './actions/favorite_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -21,6 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
 
+  window.createFavorite = createFavorite;
+  window.deleteFavorite = deleteFavorite;
   window.showRestaurant = showRestaurant;
   window.store = store;
 
