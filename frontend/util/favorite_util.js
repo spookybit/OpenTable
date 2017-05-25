@@ -13,3 +13,15 @@ export const deleteFav = (user_id, favorite) => (
     data: {favorite}
   })
 );
+
+export const allFav = (currentuser_id) => {
+  return (
+    $.ajax({
+      method: 'GET',
+      url: `/api/users/${currentuser_id}/favorites`,
+      data: {currentuser_id: currentuser_id}
+
+  })
+);
+
+};

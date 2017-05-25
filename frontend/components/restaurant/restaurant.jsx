@@ -27,7 +27,6 @@ class Restaurant extends React.Component {
 
 
   toggleFavorite() {
-    // debugger;
     const userId = this.props.currentUser.id;
     const locationId = this.props.restaurant.id;
     const fav = {user_id: `${userId}`, restaurant_id: `${locationId}`};

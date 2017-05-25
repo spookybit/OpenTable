@@ -1,9 +1,8 @@
 class Api::FavoritesController < ApplicationController
 
-  # def index
-  #   @favorites = User.find_by(id: #####params[:user_id]).favorites
-  #
-  # end
+  def index
+    @favorites = User.find(params[:user_id]).favorites
+  end
 
  def create
    @favorite = Favorite.new(favorite_params)

@@ -14,7 +14,7 @@ class HomeIndex extends React.Component {
   citiesList() {
     const cities = this.props.cities;
     return cities.map((city, idx) => {
-      return <Link to={`/${city.location}`} key={idx}>{city.location}</Link>;
+      return <Link to={`/city/${city.location}`} key={idx}>{city.location}</Link>;
     });
   }
 
@@ -22,7 +22,7 @@ class HomeIndex extends React.Component {
     const cities = this.props.cities;
     return cities.map((city, idx) => {
       return (
-        <Link to={`/${city.location}`} key={idx} className="indexCityBackground">
+        <Link to={`/city/${city.location}`} key={idx} className="indexCityBackground">
           <img src={city.img_url} key={idx} />
           <p>{city.location}</p>
         </Link>
