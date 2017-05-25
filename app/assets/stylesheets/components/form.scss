@@ -17,7 +17,7 @@ input[type=text] {
   margin-top: 13px;
   overflow: hidden;
   font-size: 15px;
-  background-color: none;
+  background: #F6F5F5;
 }
 
 .formClick {
@@ -52,6 +52,7 @@ input[type=text] {
   margin: auto;
   margin-bottom: 20px;
   margin-top: 20px;
+  background: white;
 
 
 }
@@ -67,4 +68,5 @@ input[type=text] {
   margin: 10px 20px 20px 20px;
   border: 1px solid #ccc;
   display: flex;
+  background: #F6F5F5;
 }

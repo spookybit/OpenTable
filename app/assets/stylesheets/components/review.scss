@@ -18,9 +18,9 @@
   color: red;
 }
 
-.alreadyReviewed {
-  
-}
+// .alreadyReviewed {
+//
+// }
 
 .restReviews {
   display: flex;
@@ -40,12 +40,17 @@
 .reviewListItem {
   padding: 15px 15px 15px 15px;
   font-size: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.reviewListItem:first-child {
+  border: none;
 }
 
 .reviewListItemHeader {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  font-size: 16px;
 }
 
 .reviewListItemHeader li {

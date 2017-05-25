@@ -2,6 +2,7 @@ import React from 'react';
 import ReviewListItem from '../review/review_list_item';
 import ReviewFormContainer from '../review/review_form_container';
 import SearchContainer from '../search/search_container';
+import ReservationContainer from '../reservations/reservation_container';
 
 class Restaurant extends React.Component {
   constructor(props) {
@@ -63,9 +64,9 @@ class Restaurant extends React.Component {
 
   favButton () {
     if (this.props.restaurant.favorited) {
-      return <div>Unfollow</div>;
+      return <div>Unfavorite</div>;
     } else {
-      return <div>&lt;3 Favorite</div>;
+      return <div>Favorite</div>;
     }
   }
 
@@ -92,6 +93,7 @@ class Restaurant extends React.Component {
         </div>
 
         <SearchContainer />
+        <ReservationContainer />
 
         <div className="restDescription">
           <p>About {restaurant.name}</p>
@@ -105,9 +107,9 @@ class Restaurant extends React.Component {
           <div className="reviewFormandErrors">
             {this.reviewForm()}
           </div>
-          <div className="reviewList">
+          <ul className="reviewList">
             {this.reviewsList()}
-          </div>
+          </ul>
         </div>
 
       </div>

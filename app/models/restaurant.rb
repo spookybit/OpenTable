@@ -22,15 +22,6 @@ class Restaurant < ApplicationRecord
   has_many :reservations
   has_many :favorites
 
-  def reservation_times
-    reservations = []
-
-    time = self.hours[4..7].to_i
-    time= self.convertime(time)
-
-  end
-
-
   def convertime(string)
     time = string.to_i
 

@@ -18,11 +18,15 @@ class SearchPage extends React.Component {
   render() {
     const search = this.props.location.pathname.slice(8);
     return (
-      <div>
-        <div>
-          Search Results
+      <div className="searchPage">
+        <div className="searchResultsLabel">
+          <div className="searchResultsLabelText">
+            Search Results
+          </div>
         </div>
-        {this.searchEats()}
+        <div className="restReviews">
+          {this.searchEats()}
+        </div>
       </div>
     );
   }
