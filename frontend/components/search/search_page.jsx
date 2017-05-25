@@ -20,7 +20,7 @@ class SearchPage extends React.Component {
     return (
       <div>
         <div>
-          Search Results for {`${search}`}
+          Search Results
         </div>
         {this.searchEats()}
       </div>
@@ -29,3 +29,5 @@ class SearchPage extends React.Component {
 }
 
 export default SearchPage;
+
+//Search Results for {`${search}`}

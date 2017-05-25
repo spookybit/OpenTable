@@ -22,34 +22,25 @@ class Restaurant < ApplicationRecord
   has_many :reservations
   has_many :favorites
 
-  def open_time
-    time = self.hours[0..3].to_i
-    if time == 1200
-      time = time.to_s
-      time[0..1] + ":" + time[2..3] + " PM"
-    elsif time > 1200
-      time -= 1200
-      time = time.to_s
-      "0" + time[0] + ":" + time[1..2] + " PM"
-    elsif time < 100
-      time += 1200
-      time = time.to_s
-      time[0..1] + ":" + time[2..3] + " AM"
-    elsif time < 1200 && time >= 1000
-      time = time.to_s
-      time[0..1] + ":" + time[2..3] + " AM"
-    else
-      time = time.to_s
-      "0" + time[0] + ":" + time[1..2] + " AM"
-    end
+  def reservation_times
+    reservations = []
+
+    time = self.hours[4..7].to_i
+    time= self.convertime(time)
+
   end
 
-  def close_time
-    time = self.hours[4..7].to_i
+
+  def convertime(string)
+    time = string.to_i
+
     if time == 2400
       time -= 1200
       time = time.to_s
       time[0..1] + ":" + time[2..3] + " AM"
+    elsif time == 1200
+      time = time.to_s
+      time[0..1] + ":" + time[2..3] + " PM"
     elsif time > 1200
       time -= 1200
       time = time.to_s
@@ -57,7 +48,7 @@ class Restaurant < ApplicationRecord
     elsif time < 100
       time += 1200
       time = time.to_s
-      time[0..1] + ":" + time[2..3] + " PM"
+      time[0..1] + ":" + time[2..3] + " AM"
     elsif time < 1200 && time >= 1000
       time = time.to_s
       time[0..1] + ":" + time[2..3] + " AM"
@@ -65,6 +56,17 @@ class Restaurant < ApplicationRecord
       time = time.to_s
       "0" + time[0] + ":" + time[1..2] + " AM"
     end
+
+  end
+
+  def open_time
+    time = self.hours[0..3].to_i
+    self.convertime(time)
+  end
+
+  def close_time
+    time = self.hours[4..7].to_i
+    self.convertime(time)
   end
 
   def moneys

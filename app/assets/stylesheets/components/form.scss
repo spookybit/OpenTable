@@ -2,13 +2,11 @@ input[type=text] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
-  box-sizing: border-box;
   border: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   outline: none;
   font-size: 25px;
-  // max-width: 400px;
 
 }
 
@@ -16,7 +14,7 @@ input[type=text] {
   border: none;
   width: 90px;
   height: 47px;
-  margin-top: 8px;
+  margin-top: 13px;
   overflow: hidden;
   font-size: 15px;
   background-color: none;
@@ -52,6 +50,9 @@ input[type=text] {
   max-width: 900px;
   border-radius: 2px;
   margin: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+
 
 }
 

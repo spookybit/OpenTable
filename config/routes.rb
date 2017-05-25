@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :restaurants, only: [:index, :create, :show] do
       resources :reviews, only: [:show, :create]
+      resources :reservations, only: [:index, :create, :destroy]
     end
     resources :locations, only: [:index, :show]
   end

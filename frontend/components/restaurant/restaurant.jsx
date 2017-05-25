@@ -42,7 +42,15 @@ class Restaurant extends React.Component {
 
   reviewForm() {
     if (this.props.currentUser) {
-      return <ReviewFormContainer restaurant={this.props.restaurant}/>;
+      const review = this.props.restaurant.reviews.filter(rev => (
+        rev.username === this.props.currentUser.username)
+      );
+      if (review[0]) {
+        return <div className="ReviewFormErrors alreadyReviewed">Thank you for your review</div>;
+      } else {
+        return <ReviewFormContainer restaurant={this.props.restaurant}/>;
+
+      }
     } else {
       return (
         <div className="ReviewFormErrors">
@@ -53,8 +61,16 @@ class Restaurant extends React.Component {
     }
   }
 
-  render() {
+  favButton () {
+    if (this.props.restaurant.favorited) {
+      return <div>Unfollow</div>;
+    } else {
+      return <div>&lt;3 Favorite</div>;
+    }
+  }
 
+  render() {
+    // debugger;
     const {restaurant} = this.props;
     return (
       <div className="restaurant">
@@ -63,7 +79,7 @@ class Restaurant extends React.Component {
 
           <div className="restHeaderText">
             <h1>{restaurant.name}</h1>
-            <div className="follow_button" onClick={this.toggleFavorite}>&lt;3</div>
+            <div className="follow_button" onClick={this.toggleFavorite}>{this.favButton()}</div>
             <div className="restHeaderHours">
               <li>Hours:</li>
               <li>{restaurant.open_time}-{restaurant.close_time}</li>
