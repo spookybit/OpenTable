@@ -53,7 +53,9 @@ class Heading extends React.Component {
     return (
       <nav className="header">
         <div className="headerLeft">
-          <img src="http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,w_256/v1495602139/munchk_logo_ms6dmf.png" className="logoheader"/>
+          <Link to="/">
+            <img src="http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,w_256/v1495602139/munchk_logo_ms6dmf.png" className="logoheader"/>
+          </Link>
           {this.dropdownLocations()}
         </div>
         <div className="headerRight">
@@ -81,8 +83,10 @@ class Heading extends React.Component {
   personalGreeting(currentUser) {
     return (
       <hgroup className="header">
-        <div>
-          <img src="http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,w_256/v1495602139/munchk_logo_ms6dmf.png" className="logoheader"/>
+        <div className="headerLeft">
+          <Link to="/">
+            <img src="http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,w_256/v1495602139/munchk_logo_ms6dmf.png" className="logoheader"/>
+          </Link>
           {this.dropdownLocations()}
         </div>
         <div className="userOptions">

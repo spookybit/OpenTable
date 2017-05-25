@@ -19,7 +19,13 @@ class Api::RestaurantsController < ApplicationController
 
   def show
     @restaurant = Restaurant.find(params[:id])
-    @favorited = current_user.favorites.where(restaurant_id: @restaurant.id)
+
+    if current_user
+      @favorited = current_user.favorites.where(restaurant_id: @restaurant.id)
+    else
+      @favorited = []
+    end
+
     if @favorited.empty?
       @favorited = false
     else
