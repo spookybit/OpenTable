@@ -56,7 +56,7 @@ class Heading extends React.Component {
           <img src="http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,w_256/v1495602139/munchk_logo_ms6dmf.png" className="logoheader"/>
           {this.dropdownLocations()}
         </div>
-        <div>
+        <div className="headerRight">
           <button onClick={this.openModal("login")}>Login</button>
           <button onClick={this.openModal("sign up")}>Sign Up</button>
         </div>
@@ -81,7 +81,10 @@ class Heading extends React.Component {
   personalGreeting(currentUser) {
     return (
       <hgroup className="header">
-        {this.dropdownLocations()}
+        <div>
+          <img src="http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,w_256/v1495602139/munchk_logo_ms6dmf.png" className="logoheader"/>
+          {this.dropdownLocations()}
+        </div>
         <div className="userOptions">
           {this.userDropdown(currentUser)}
           <button className="header-button"
@@ -130,6 +133,7 @@ class Heading extends React.Component {
     return (
       <div>
         {this.greeting()}
+
         <Modal
           contentLabel="Form"
           isOpen={this.state.modalOpen}

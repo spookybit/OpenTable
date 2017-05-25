@@ -6,8 +6,8 @@
 }
 
 .logoheader {
-  max-width: 30px;
-  max-height: 30px;
+  max-width: 29px;
+  max-height: 29px;
 }
 
 .header button {
@@ -28,6 +28,14 @@
   transition-duration: 0.4s;
   cursor: pointer;
 
+}
+
+.headerRight button{
+  margin-right: 10px;
+}
+
+.dropdown {
+  margin-left: 10px;
 }
 
 .header button:hover {
@@ -53,10 +61,17 @@
   display: block;
 }
 
-// .headerleft {
-//   display: flex;
-//   flex-direction: row
-// }
+.header .headerLeft {
+  padding-left: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.headerNow {
+  display: flex;
+  flex-direction: row;
+}
 
 .userOptions {
   display: flex;

@@ -1,5 +1,6 @@
 .indexMain {
   background-color: #F6F5F5;
+  justify-content: center;
 }
 
 .indexMain img {
@@ -10,7 +11,7 @@
   border-radius: 25px;
   padding-top: 15px;
   margin-left: 15px;
-  max-width: 900px;
+  // max-width: 900px;
   font-family: 'Source Sans Pro', sans-serif;
   background-color: white;
 }
@@ -26,6 +27,7 @@
   justify-content: center;
   flex-wrap: wrap;
   max-width: 1150px;
+  margin: auto;
 }
 
 .indexPhotos img{

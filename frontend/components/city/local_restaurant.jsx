@@ -6,19 +6,12 @@ class LocalRestaurant extends React.Component {
     super (props);
   }
 
-  moneys (num) {
-    let moneys = "";
-    for (let i = 0; i < num; i++) {
-      moneys += "$";
-    }
-    return moneys;
-  }
-
   render () {
     const { restaurant } = this.props;
 
     return (
-      <Link to={`/restaurant/${restaurant.name}/${restaurant.id}`} className="localRestaurantsIndexItem">
+      <Link to={`/restaurant/${restaurant.name}/${restaurant.id}`}
+        className="localRestaurantsIndexItem">
         <div className="cityIndexRow">
           <div className="localRestIdxImg">
             <img src={restaurant.img_url} />
@@ -26,7 +19,7 @@ class LocalRestaurant extends React.Component {
 
           <ul className="cityIndexAbout">
             <li>{restaurant.name}</li>
-            <li>Price: {this.moneys(restaurant.price)}</li>
+            <li>Price: {restaurant.moneys}</li>
             <li>Rating: {restaurant.average_rating}</li>
           </ul>
 

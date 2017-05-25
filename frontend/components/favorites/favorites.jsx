@@ -22,6 +22,7 @@ class Favorites extends React.Component {
   render() {
     return(
       <div>
+        <div>Your Favorite Restaurants</div>
         {this.favoriteEats()}
       </div>
     );

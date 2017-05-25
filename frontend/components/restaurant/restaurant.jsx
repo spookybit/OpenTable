@@ -61,7 +61,7 @@ class Restaurant extends React.Component {
               <li>{restaurant.open_time}-{restaurant.close_time}</li>
             </div>
             <li>{restaurant.location}</li>
-            <li>Price: {restaurant.price}</li>
+            <li>Price: {restaurant.moneys}</li>
             <li>Rating: {restaurant.average_rating}</li>
           </div>
 

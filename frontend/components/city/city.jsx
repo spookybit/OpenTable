@@ -35,8 +35,8 @@ class CityRestaurants extends React.Component {
       <div className="cityIdxMain">
         <img src="http://res.cloudinary.com/drgxeu7sx/image/upload/v1495323223/index-header_rnrgje.jpg" />
         <SearchContainer />
-        <p className="cityIdxText">Treat your tastebuds: Explore {this.props.city} restaurants</p>
         <div className="localRestaurantsIndexContainer">
+            <p className="cityIdxText">Treat your tastebuds: Explore {this.props.city} restaurants</p>
           <p className="cityIdxText">Local Restaurants</p>
           {this.localEats()}
         </div>

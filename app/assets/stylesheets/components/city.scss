@@ -1,11 +1,9 @@
 .cityIdxMain {
   font-family: 'Source Sans Pro', sans-serif;
   background-color: #F6F5F5;
+  margin: auto;
 }
 
-.cityIdxText {
-  font-size: 25px;
-}
 
 .cityIdxMain p {
   padding-bottom: 5px;
@@ -17,12 +15,23 @@
   padding-left: 15px;
 }
 
+.cityIdxText {
+  font-size: 31px;
+}
+
+.cityExploreText {
+  font-size: 25px;
+  max-width: 950px;
+  margin: auto;
+}
+
 .localRestaurantsIndexContainer {
+  align-items: center;
   border-radius: 25px;
   padding-top: 15px;
   max-width: 900px;
   background-color: white;
-  margin-left: 15px;
+  margin: auto;
 }
 
 .localRestaurantsIndexContainer p {
@@ -52,8 +61,8 @@
 }
 
 .cityIndexAbout {
-  padding-left: 10px;
-  padding-right: 50px;
+  padding-left: 20px;
+  width: 35%;
 }
 
 .localRestaurantsIndexItem img {

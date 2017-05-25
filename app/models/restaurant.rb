@@ -69,7 +69,7 @@ class Restaurant < ApplicationRecord
 
   def moneys
     dollars = ""
-    self.rating.times do
+    self.price.times do
       dollars += "$"
     end
     dollars

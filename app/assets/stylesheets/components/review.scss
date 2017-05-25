@@ -1,3 +1,17 @@
+.reviewForm {
+  margin: 10px 20px 20px 20px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+}
+
+.reviewInput {
+  min-height: 20vh;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 25px;
+}
+
 .restReviews {
   display: flex;
   flex-direction: column;
@@ -15,6 +29,7 @@
 
 .reviewListItem {
   padding: 15px 15px 15px 15px;
+  font-size: 20px;
 }
 
 .reviewListItemHeader {
@@ -29,15 +44,26 @@
 }
 
 .formReviewClick {
-  padding: 13px 32px;
-  background-color: #f44336
+  padding: 20px 32px;
 }
 
 .calendar {
-  height: 34px;
+  height: 60px;
+  width: 50%;
+  border: none;
 }
 
 .calendar:hover {
   background-color: white;
   color: black;
+}
+
+.reviewDrop {
+  width: 50%;
+}
+
+.reviewFormErrors {
+  display: flex;
+  justify-content: center;
+  color: red
 }
