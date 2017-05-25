@@ -10,9 +10,20 @@ class Favorites extends React.Component {
     this.props.allFavorite(this.props.currentUser.id);
   }
 
+  favoriteEats() {
+    const restaurants = this.props.favoriteRestaurants;
+
+    return Object.keys(restaurants).map((key, idx) => {
+      return <LocalRestaurant key={idx} restaurant={restaurants[key]} />;
+    });
+
+  }
+
   render() {
     return(
-      <div>his</div>
+      <div>
+        {this.favoriteEats()}
+      </div>
     );
   }
 }
