@@ -12,7 +12,6 @@ class ReservationPage extends React.Component {
   }
 
   reservationListItem() {
-    // debugger;
     const reservations = this.props.reservations;
 
     return Object.keys(reservations).map((key, idx) => {
@@ -26,7 +25,7 @@ class ReservationPage extends React.Component {
   }
 
   render () {
-    debugger;
+
     const {restaurant} = this.props;
     return (
       <div className="searchPage">
