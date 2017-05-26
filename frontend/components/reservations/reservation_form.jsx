@@ -16,8 +16,10 @@ class ReservationForm extends React.Component {
   }
 
   handleSubmit(e) {
+    // debugger;
     e.preventDefault;
     this.state.restaurant_id = this.props.currentRestaurant.id;
+    this.state.user_id = this.props.currentUser.id;
     this.props.createReservation(this.state);
   }
 

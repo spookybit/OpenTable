@@ -9,7 +9,8 @@ import Root from './components/root';
 import { showRestaurant } from './actions/restaurant_actions';
 import { createFavorite, deleteFavorite } from './actions/favorite_actions';
 import {makeReservation} from './util/reservation_api_util';
-import {createReservation} from './actions/reservation_actions';
+import {allReservations, createReservation} from './actions/reservation_actions';
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -23,6 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
+
+  window.allReservations = allReservations;
 
   window.createReservation = createReservation;
   window.makeReservation = makeReservation;

@@ -12,6 +12,7 @@ import HomeIndexContainer from './home_index/home_index_container';
 import RestaurantContainer from './restaurant/restaurant_container';
 import SearchPageContainer from './search/search_page_container';
 import FavoritesContainer from './favorites/favorites_container';
+import ReservationPageContainer from './reservations/reservation_page_container';
 
 import CityContainer from './city/city_container';
 
@@ -23,6 +24,7 @@ const App = () => (
       <Route exact path="/restaurant/:name/:id" component={RestaurantContainer} />
       <Route exact path="/city/:id" component={CityContainer} />
       <Route exact path="/favorites" component={FavoritesContainer} />
+      <Route exact path="/reservations" component={ReservationPageContainer} />
       <Route path="/" component={HomeIndexContainer} />
     </Switch>
 

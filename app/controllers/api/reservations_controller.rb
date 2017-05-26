@@ -1,5 +1,14 @@
 class Api::ReservationsController < ApplicationController
 
+  def index
+
+    if current_user
+      @reservations = User.find(current_user.id).reservations
+    else
+      @reservations = {}
+    end
+  end
+
   def create
     @reservation = Reservation.new(reservation_params)
     @reservation.user_id = current_user.id

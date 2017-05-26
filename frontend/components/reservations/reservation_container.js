@@ -2,8 +2,8 @@ import {connect} from 'react-redux';
 import ReservationForm from './reservation_form';
 import {createReservation} from '../../actions/reservation_actions';
 
-const mapStateToProps = ({currentUser, currentRestaurant}) => ({
-  currentUser: currentUser,
+const mapStateToProps = ({session, currentRestaurant}) => ({
+  currentUser: session.currentUser,
   currentRestaurant: currentRestaurant
 });
 
