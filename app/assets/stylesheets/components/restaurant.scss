@@ -1,7 +1,7 @@
 .restaurant {
   background-color: #F6F5F5;
   margin: auto;
-  height: 100%;
+  height: 100vh;
   padding-bottom: 50px;
 }
 
@@ -34,7 +34,7 @@
 .follow_button {
   display: flex;
   justify-content: center;
-  background: red;
+  background: #DB0101;
   color: white;
   max-width: 72px;
   padding: 2px 4px;
@@ -44,7 +44,7 @@
 }
 
 .follow_button:hover {
-  color: #66ccff;
+  background-color: #A60000;
 }
 
 .restHeaderHours {
@@ -70,6 +70,7 @@
 
 .restDescription p {
   font-size: 25px;
+  font-weight: 400;
   padding: 10px 0px 10px 15px;
   border-bottom: black;
   border-bottom-style: solid;

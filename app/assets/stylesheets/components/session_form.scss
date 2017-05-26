@@ -32,14 +32,16 @@
 }
 
 .session_submit {
-  background-color: #DA3743;
+  background-color: #DB0101;
   border-color: #b8222d;
   color: white;
   text-align: center;
+  transition-duration: 0.4s;
+
 }
 
 .session_submit:hover {
-  background-color: #ad0000;
+  background-color: #A60000;
 }
 
 .session_errors {
@@ -53,13 +55,15 @@
   text-align: center;
   padding-top: 15px;
   padding-bottom: 15px;
-  font-family: 'Source Sans Pro', sans-serif;
+  // font-family: 'Source Sans Pro', sans-serif;
   font-size: 14px;
   padding-right: 11px;
+  transition-duration: 0.4s;
+  cursor: pointer;
 }
 
 .demo_button:hover {
-  background-color: #0000e6;
+  background-color: #0038A6;
 }
 
 .username-login-input {

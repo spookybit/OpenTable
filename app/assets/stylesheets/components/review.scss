@@ -10,6 +10,9 @@
   border: none;
   border-bottom: 1px solid #ccc;
   font-size: 25px;
+  padding-left: 15px;
+  padding-top: 15px;
+  font-weight: 400;
 }
 
 .ReviewFormErrors {
@@ -34,6 +37,7 @@
 
 .restReviews p {
   font-size: 25px;
+  font-weight: 400;
   padding: 15px;
 }
 
@@ -66,10 +70,16 @@
 .formReviewClick {
   padding: 20px 32px;
 }
+//
+// .reviewButtons {
+//   display: flex;
+//   justify-content: space-around;
+// }
 
 .calendar {
   height: 60px;
-  width: 50%;
+  margin-left: 5%;
+  width: 20%;
   border: none;
 }
 
@@ -79,7 +89,8 @@
 }
 
 .reviewDrop {
-  width: 50%;
+  margin-left: 33%;
+  width: 15%;
   background: none;
 }
 

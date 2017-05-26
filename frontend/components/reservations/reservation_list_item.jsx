@@ -17,14 +17,26 @@ class ReservationListItem extends React.Component {
 
     const {reservation} = this.props;
     const {currentUser} = this.props;
-
-
+    // debugger;
     return (
-      <div onClick={this.handleClick}>
-        {reservation.date}
-        {reservation.num_guests}
-        {reservation.time_slot}
-        {reservation.name}
+      <div className="reservListItem">
+        <img className="reservImg" src={reservation.img} />
+        <div className="reservDescript">
+          You have a reservation for {reservation.num_guests} at {reservation.name}
+        </div>
+        <div className="reservTime">
+          <div>
+            <li>
+              Date: {reservation.date}
+            </li>
+            <li>
+              At: {reservation.time_slot}
+            </li>
+          </div>
+          <div>
+            <div className="cancelReserv" onClick={this.handleClick}>Cancel Reservation</div>
+          </div>
+        </div>
       </div>
     );
   }

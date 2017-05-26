@@ -12,7 +12,9 @@
 .featured {
   border-radius: 25px;
   padding-top: 15px;
-  margin-left: 15px;
+  max-width: 900px;
+  margin: auto;
+  // margin-left: 15px;
   // max-width: 900px;
   font-family: 'Source Sans Pro', sans-serif;
   background-color: white;
@@ -70,4 +72,5 @@
   column-gap: 50px;
   font-family: 'Source Sans Pro', sans-serif;
   color: #237B98;
+  // max-width: 900px;
 }

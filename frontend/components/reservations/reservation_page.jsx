@@ -28,8 +28,15 @@ class ReservationPage extends React.Component {
   render () {
     const {restaurant} = this.props;
     return (
-      <div>
-        {this.reservationListItem()}
+      <div className="searchPage">
+        <div className="searchResultsLabel">
+          <div className="searchResultsLabelText">
+            Upcoming Reservations
+          </div>
+        </div>
+        <div className="restReviews">
+          {this.reservationListItem()}
+        </div>
       </div>
     );
   }
