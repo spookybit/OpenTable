@@ -4,7 +4,7 @@ import {Route, Redirect, Switch, Link, HashRouter} from 'react-router-dom';
 
 import Modal from 'react-modal';
 
-import {AuthRoute} from '../util/route_util';
+import {ProtectedRoute} from '../util/route_util';
 
 import HeadingContainer from './heading/heading_container';
 import SessionFormContainer from './session_form/session_form_container';
@@ -23,14 +23,12 @@ const App = () => (
       <Route path="/search" component={SearchPageContainer} />
       <Route exact path="/restaurant/:name/:id" component={RestaurantContainer} />
       <Route exact path="/city/:id" component={CityContainer} />
-      <Route exact path="/favorites" component={FavoritesContainer} />
-      <Route exact path="/reservations" component={ReservationPageContainer} />
+      <ProtectedRoute exact path="/favorites" component={FavoritesContainer} />
+      <ProtectedRoute exact path="/reservations" component={ReservationPageContainer} />
       <Route path="/" component={HomeIndexContainer} />
     </Switch>
 
   </div>
 );
-// <AuthRoute path="/log" component={HeadingContainer} />
-// <AuthRoute path="/signup" component={SessionFormContainer} />
 
 export default App;
