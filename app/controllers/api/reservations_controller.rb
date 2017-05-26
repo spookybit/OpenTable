@@ -19,9 +19,21 @@ class Api::ReservationsController < ApplicationController
     end
   end
 
+  def destroy
+    @res = User.find(current_user.id).reservations.where(id: reservation_params[:reservation_id])
+    @reservations = current_user.reservations
+
+    if @res
+      @res.first.destroy
+      render :index
+    else
+      render :json ['no reservation found']
+    end
+  end
+
 
   private
   def reservation_params
-    params.require(:reservation).permit(:restaurant_id, :time_slot, :date, :num_guests)
+    params.require(:reservation).permit(:restaurant_id, :time_slot, :date, :num_guests, :reservation_id)
   end
 end

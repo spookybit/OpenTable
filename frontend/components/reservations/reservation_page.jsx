@@ -12,11 +12,15 @@ class ReservationPage extends React.Component {
   }
 
   reservationListItem() {
-    debugger;
+    // debugger;
     const reservations = this.props.reservations;
 
     return Object.keys(reservations).map((key, idx) => {
-      return <ReservationListItem key={idx} restaurant={reservations[key]} />;
+      return <ReservationListItem key={idx}
+        currentUser={this.props.currentUser}
+        deleteReservation={this.props.deleteReservation}
+        reservation={reservations[key]}
+        />;
     });
 
   }

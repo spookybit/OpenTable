@@ -73,7 +73,7 @@ class Heading extends React.Component {
         <button className="user-dropdown-button">Hi, {currentUser.username}</button>
         <div className="user-dropdown-content">
           <Link to="/reservations">Reservations</Link>
-          <Link to="/favorites" onClick={this.favoriteIndex}>Favorites</Link>
+          <Link to="/favorites">Favorites</Link>
 
         </div>
       </div>

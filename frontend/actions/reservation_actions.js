@@ -1,4 +1,4 @@
-import {makeReservation, allReservations} from '../util/reservation_api_util';
+import {makeReservation, allReservations, destroyReservation} from '../util/reservation_api_util';
 
 export const RECEIVE_RESERVATION = "RECEIVE_RESERVATION";
 export const RECEIVE_ALL_RESERVATIONS = "RECEIVE_ALL_RESERVATIONS";
@@ -21,4 +21,9 @@ export const indexReservation = (user_id) => dispatch => (
 export const createReservation = (reservation) => dispatch => (
   makeReservation(reservation)
     .then(data => dispatch(receiveReservation(data)))
+);
+
+export const deleteReservation = (user_id, reservation_id) => dispatch => (
+  destroyReservation(user_id, reservation_id)
+    .then(data => dispatch(receiveAllReservations(data)))
 );

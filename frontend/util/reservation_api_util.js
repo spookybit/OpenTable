@@ -12,3 +12,11 @@ export const allReservations = (user_id) => (
     url: `/api/users/${user_id}/reservations`
   })
 );
+
+export const destroyReservation = (user_id, reservation_id) => (
+  $.ajax({
+    type: 'DELETE',
+    url: `/api/users/${user_id}/reservations/${reservation_id}`,
+    data: {reservation: {reservation_id}}
+  })
+);
