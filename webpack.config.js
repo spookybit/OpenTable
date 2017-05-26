@@ -43,9 +43,6 @@ module.exports = {
     ]
   },
   devtool: 'source-map',
-  "devDependencies": {
-    "redux-logger": "^2.8.1"
-  },
   resolve: {
     extensions: ['.js', '.jsx', '*']
   }

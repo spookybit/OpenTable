@@ -10,6 +10,7 @@ class CityRestaurants extends React.Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.props.requestLocation(this.props.match.params.id);
   }
 

@@ -220,18 +220,45 @@ rating: 5, date_visited: "2017-03-28", description: "I always want large fries w
 Review12 = Review.create(user_id: User5.id, restaurant_id: Restaurant2.id,
 rating: 5, date_visited: "2017-01-01", description: "I like the food they have here. It is great.")
 
-Review13 = Review.create(user_id: User1.id, restaurant_id: Restaurant2.id,
+Review13 = Review.create(user_id: User1.id, restaurant_id: Restaurant3.id,
 rating: 1, date_visited: "2017-02-28", description: "Who fired brad's wife? On his birthday, no less.")
-Review14 = Review.create(user_id: User3.id, restaurant_id: Restaurant2.id,
-rating: 5, date_visited: "2017-01-23", description: "We're no strangers to love. You know the rules and so do I.")
-Review15 = Review.create(user_id: User6.id, restaurant_id: Restaurant2.id,
-rating: 5, date_visited: "2017-05-12", description: "Darude sandstorm tells me this food is amazing.")
-Review16 = Review.create(user_id: User4.id, restaurant_id: Restaurant2.id,
-rating: 5, date_visited: "2017-01-18", description: "Coffee that leaves me thinking about life in my skinny jeans.")
-Review17 = Review.create(user_id: User8.id, restaurant_id: Restaurant2.id,
-rating: 5, date_visited: "2017-03-28", description: "I always want large fries with that.")
-Review18 = Review.create(user_id: User10.id, restaurant_id: Restaurant2.id,
-rating: 5, date_visited: "2017-01-01", description: "I like the food they have here. It is great.")
+Review14 = Review.create(user_id: User3.id, restaurant_id: Restaurant3.id,
+rating: 5, date_visited: "2017-01-23", description: "We're no strangers to love. You know the rules and so do I. A real restaurant is what I'm thinking of.")
+Review15 = Review.create(user_id: User6.id, restaurant_id: Restaurant3.id,
+rating: 5, date_visited: "2017-05-12", description: "Freshest noodles I have ever had. I cant wait to slurp them up again!")
+Review16 = Review.create(user_id: User4.id, restaurant_id: Restaurant3.id,
+rating: 5, date_visited: "2017-01-18", description: "I could literally drown in a bowl and be ok with that.")
+Review17 = Review.create(user_id: User8.id, restaurant_id: Restaurant3.id,
+rating: 2, date_visited: "2017-03-28", description: "This was a very odd spaghetti meal. I was very confused.")
+Review18 = Review.create(user_id: User10.id, restaurant_id: Restaurant3.id,
+rating: 2, date_visited: "2017-01-01", description: "I dont usually like noodles... so I'm giving this a bad review.")
+
+Review19 = Review.create(user_id: User5.id, restaurant_id: Restaurant4.id,
+rating: 1, date_visited: "2017-02-28", description: "I am alergic to seafood. Why did I eat heeeerreeee???")
+Review20 = Review.create(user_id: User2.id, restaurant_id: Restaurant4.id,
+rating: 5, date_visited: "2017-01-03", description: "Raw fish is pretty amazing, it turns out.")
+Review21 = Review.create(user_id: User1.id, restaurant_id: Restaurant4.id,
+rating: 5, date_visited: "2017-05-12", description: "So I stumbled into here on accident, and it was the second best mistake of my life!")
+Review22 = Review.create(user_id: User6.id, restaurant_id: Restaurant4.id,
+rating: 5, date_visited: "2017-02-18", description: "Sushi ymmm")
+Review23 = Review.create(user_id: User8.id, restaurant_id: Restaurant4.id,
+rating: 4, date_visited: "2017-04-26", description: "The lond wait was pretty bad, but at least the food was good.")
+Review24 = Review.create(user_id: User9.id, restaurant_id: Restaurant4.id,
+rating: 4, date_visited: "2017-01-02", description: "Worth coming to if you have time for a long wait. I missed the birth of my son waiting in line, but it was worth it.")
+
+Review25 = Review.create(user_id: User3.id, restaurant_id: Restaurant5.id,
+rating: 5, date_visited: "2017-01-18", description: "Some cheap stuff. It provides for my degenerate needs")
+Review26 = Review.create(user_id: User6.id, restaurant_id: Restaurant5.id,
+rating: 3, date_visited: "2017-03-28", description: "I rate their food 9/10, but the service was lacking")
+Review27 = Review.create(user_id: User7.id, restaurant_id: Restaurant5.id,
+rating: 4, date_visited: "2017-01-01", description: "I cant wait to eat here again")
+
+Review28 = Review.create(user_id: User6.id, restaurant_id: Restaurant6.id,
+rating: 5, date_visited: "2017-03-04", description: "I got lost and stumbled my way here. Amazing food, but now I cant find my way back...")
+Review29 = Review.create(user_id: User8.id, restaurant_id: Restaurant6.id,
+rating: 5, date_visited: "2017-04-08", description: "This is the best meal I have ever had in my life.")
+Review30 = Review.create(user_id: User9.id, restaurant_id: Restaurant6.id,
+rating: 5, date_visited: "2017-01-21", description: "I cant believe I'm moving away from this place next month... :(")
 
 
 Favorite.destroy_all

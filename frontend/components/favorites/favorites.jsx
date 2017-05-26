@@ -7,6 +7,7 @@ class Favorites extends React.Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.props.allFavorite(this.props.currentUser.id);
   }
 
