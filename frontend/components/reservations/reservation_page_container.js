@@ -2,8 +2,9 @@ import {connect} from 'react-redux';
 import ReservationPage from './reservation_page';
 import {indexReservation} from '../../actions/reservation_actions';
 
-const mapStateToProps = ({session}) => ({
-  currentUser: session.currentUser
+const mapStateToProps = ({session, reservations}) => ({
+  currentUser: session.currentUser,
+  reservations: reservations
 });
 
 const mapDispatchToProps = dispatch => ({

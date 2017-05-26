@@ -19,3 +19,69 @@
 .searchResultsLabelText {
   margin-left: 15px;
 }
+
+.reservationForm {
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  max-width: 900px;
+  background-color: white;
+}
+
+.reservationHeader {
+  margin: 15px 0px;
+  margin-bottom: 9px;
+  font-size: 31px;
+  margin-left: 20px;
+  font-weight: 400;
+}
+
+.numGuests {
+  border: none;
+  width: 30%;
+  height: 47px;
+  overflow: hidden;
+  font-size: 15px;
+  background: none;
+  margin-top: none;
+}
+
+.timeSlot {
+  border: none;
+  width: 30%;
+  height: 47px;
+  overflow: hidden;
+  font-size: 15px;
+  background: none;
+}
+
+.reservationCalendar {
+  margin-bottom: none;
+  border: none;
+  width: 30%
+}
+
+.reservationSubmit {
+  margin-bottom: none;
+  border: none;
+  background: #DB0101;
+  width: 86px;
+  text-align: center;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  transition-duration: 0.4s;
+  color: white;
+}
+
+.reservationSubmit:hover {
+  background-color: #A60000;
+}
+
+.reservationInputs {
+  // border: 1px solid #ccc;
+  margin: 20px;
+  background-color: #F6F5F5
+}

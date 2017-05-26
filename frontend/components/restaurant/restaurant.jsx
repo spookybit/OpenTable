@@ -70,6 +70,12 @@ class Restaurant extends React.Component {
     }
   }
 
+  reservationOrNot() {
+    if (this.props.currentUser) {
+      return <ReservationContainer />;
+    }
+  }
+
   render() {
     // debugger;
     const {restaurant} = this.props;
@@ -92,8 +98,7 @@ class Restaurant extends React.Component {
 
         </div>
 
-        <SearchContainer />
-        <ReservationContainer />
+        {this.reservationOrNot()}
 
         <div className="restDescription">
           <p>About {restaurant.name}</p>
@@ -116,5 +121,5 @@ class Restaurant extends React.Component {
     );
   }
 }
-
+// <SearchContainer />
 export default Restaurant;

@@ -52,31 +52,39 @@ class ReservationForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <select defaultValue="Number of Guests" onChange={this.update('num_guests')}>
-          <option disabled>Number of Guests</option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-          <option>6</option>
-          <option>7</option>
-          <option>8</option>
-          <option>9</option>
-          <option>10</option>
-        </select>
+      <form className="reservationForm" onSubmit={this.handleSubmit}>
 
-        <select defaultValue="Time" onChange={this.update('time_slot')}>
-          <option disabled>Time</option>
-          {this.getTimes()}
-        </select>
+        <div className="reservationHeader">
+          Make a reservation
+        </div>
 
-        <input type="date" className="calendar"
-          min={currentDate()} max="2017-12-31"
-          onChange={this.update('date')}/>
+        <div className="reservationInputs">
+          <select className="numGuests" defaultValue="Number of Guests" onChange={this.update('num_guests')}>
+            <option disabled>Number of Guests</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+          </select>
 
-        <input type="submit" />
+          <select className="timeSlot" defaultValue="Time" onChange={this.update('time_slot')}>
+            <option disabled>Time</option>
+            {this.getTimes()}
+          </select>
+
+          <input type="date" className="reservationCalendar"
+            min={currentDate()} max="2017-12-31"
+            onChange={this.update('date')}/>
+
+          <input className="reservationSubmit" type="submit" />
+
+        </div>
       </form>
     );
   }
