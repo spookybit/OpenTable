@@ -1,5 +1,6 @@
 import React from 'react';
 import {currentDate, checkValidDate} from '../../util/current_day';
+import { Link, withRouter } from 'react-router-dom';
 
 class ReservationForm extends React.Component {
   constructor(props) {
@@ -28,6 +29,7 @@ class ReservationForm extends React.Component {
       this.state.restaurant_id = this.props.currentRestaurant.id;
       this.state.user_id = this.props.currentUser.id;
       this.props.createReservation(this.state);
+      this.props.history.push(`/reservations`);
     } else {
       this.setState({errors: true});
     }
@@ -115,4 +117,4 @@ class ReservationForm extends React.Component {
 
 }
 
-export default ReservationForm;
+export default withRouter(ReservationForm);

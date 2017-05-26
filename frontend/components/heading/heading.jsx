@@ -137,7 +137,7 @@ class Heading extends React.Component {
     return (
       <div>
         {this.greeting()}
-
+        <i></i>
         <Modal
           contentLabel="Form"
           isOpen={this.state.modalOpen}

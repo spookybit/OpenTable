@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
 class ReservationListItem extends React.Component {
   constructor(props) {
@@ -13,13 +14,12 @@ class ReservationListItem extends React.Component {
   }
 
   render() {
-    // debugger;
 
     const {reservation} = this.props;
     const {currentUser} = this.props;
-    // debugger;
+
     return (
-      <div className="reservListItem">
+      <Link to={`./restaurant/${reservation.name}/${reservation.restaurant_id}`} className="reservListItem">
         <img className="reservImg" src={reservation.img} />
         <div className="reservDescript">
           You have a reservation for {reservation.num_guests} at {reservation.name}
@@ -37,7 +37,7 @@ class ReservationListItem extends React.Component {
             <div className="cancelReserv" onClick={this.handleClick}>Cancel Reservation</div>
           </div>
         </div>
-      </div>
+      </Link>
     );
   }
 }

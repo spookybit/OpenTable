@@ -26,6 +26,7 @@ class ReservationPage extends React.Component {
   }
 
   render () {
+    debugger;
     const {restaurant} = this.props;
     return (
       <div className="searchPage">
