@@ -71,9 +71,9 @@ class Restaurant extends React.Component {
   }
 
   reservationOrNot() {
-    if (this.props.currentUser) {
+    // if (this.props.currentUser) {
       return <ReservationContainer />;
-    }
+    // }
   }
 
   render() {

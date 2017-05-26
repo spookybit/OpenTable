@@ -14,8 +14,7 @@
 
 class Reservation < ApplicationRecord
   validates :user_id, :restaurant_id, :time_slot, :date, :num_guests, presence: true
-  # validates :timeslot, numericality: true, length: {is: 8}
-  # validates :date, numericality: true, length: {is: 8}
+  validates_uniqueness_of :user_id, :scope => [:restaurant_id, :time_slot, :date]
 
   belongs_to :user
   belongs_to :restaurant

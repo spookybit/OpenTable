@@ -8,19 +8,40 @@ class ReservationForm extends React.Component {
     this.state = {
       num_guests: "",
       time_slot: "",
-      date: ""
+      date: "",
+      errors: false
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.displayErrors = this.displayErrors.bind(this);
 
   }
 
+  componentWillReceiveProps () {
+    this.setState({errors: false});
+  }
+
   handleSubmit(e) {
-    // debugger;
     e.preventDefault;
-    this.state.restaurant_id = this.props.currentRestaurant.id;
-    this.state.user_id = this.props.currentUser.id;
-    this.props.createReservation(this.state);
+
+    if (this.props.currentUser) {
+      this.state.restaurant_id = this.props.currentRestaurant.id;
+      this.state.user_id = this.props.currentUser.id;
+      this.props.createReservation(this.state);
+    } else {
+      this.setState({errors: true});
+    }
+
+  }
+
+  displayErrors() {
+    if (this.state.errors) {
+      return (
+        <div className="reservErrors">
+          Please sign in to make a reservation
+        </div>
+      );
+    }
   }
 
   update(field) {
@@ -55,7 +76,9 @@ class ReservationForm extends React.Component {
       <form className="reservationForm" onSubmit={this.handleSubmit}>
 
         <div className="reservationHeader">
+
           Make a reservation
+
         </div>
 
         <div className="reservationInputs">
@@ -85,6 +108,7 @@ class ReservationForm extends React.Component {
           <input className="reservationSubmit" type="submit" />
 
         </div>
+        {this.displayErrors()}
       </form>
     );
   }

@@ -43,46 +43,46 @@ Restaurant2 = Restaurant.create(name: "Starbucks", location_id: Location1.id,
 
 Restaurant3 = Restaurant.create(name: "Fuunji", location_id: Location1.id,
   price: 2, hours: "11002000", description: "Ramen",
-  img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/q_100/v1495340043/starbucks_ncuvry.jpg")
+  img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,w_250/v1495634598/yutacar-28290_ce93yf.jpg")
 
 Restaurant4 = Restaurant.create(name: "Sushi No Midori", location_id: Location1.id,
   price: 2, hours: "11002100", description: "Sushi",
-  img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/q_100/v1495340043/starbucks_ncuvry.jpg")
+  img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,w_250/v1495634676/nils-stahl-188467_stehvd.jpg")
 
 Restaurant5 = Restaurant.create(name: "Lawsons", location_id: Location1.id,
   price: 1, hours: "00002400", description: "Best fried chicken in the world",
-  img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/q_100/v1495340043/starbucks_ncuvry.jpg")
+  img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,w_250/v1495634701/matt-jones-40269_s21ogt.jpg")
 
 Restaurant6 = Restaurant.create(name: "Teuchisoba Ebisu", location_id: Location1.id,
   price: 2, hours: "10001700", description: "Sickest soba ever",
-  img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/q_100/v1495340043/starbucks_ncuvry.jpg")
+  img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,w_250/v1495634719/semenov-ivan-191829_t0imyc.jpg")
 
 
 
 
 Restaurant7 = Restaurant.create(name: "Little Luccas", location_id: Location2.id,
   price: 1, hours: "08301730", description: "Subs",
-  img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,q_100,w_250/v1495338000/mcdonalds_js83ta.jpg")
+  img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,w_250/v1495634722/alex-jones-3443_kvacuq.jpg")
 
 Restaurant8 = Restaurant.create(name: "Panda Express", location_id: Location2.id,
   price: 2, hours: "090024000", description: "Orange chicken",
-  img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,q_100,w_250/v1495338000/mcdonalds_js83ta.jpg")
+  img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,w_250/v1495634767/patryk-sobczak-162368_lozauc.jpg")
 
 Restaurant9 = Restaurant.create(name: "Z and Y", location_id: Location2.id,
 price: 3, hours: "11002100", description: "Spicy Szechuan food",
-img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/q_100/v1495340043/starbucks_ncuvry.jpg")
+img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,w_250/v1495635667/margo-brodowicz-203781_e6cuj4.jpg")
 
 Restaurant10 = Restaurant.create(name: "El Farolito", location_id: Location2.id,
 price: 2, hours: "11302030", description: "Crazy big burritos",
-img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/q_100/v1495340043/starbucks_ncuvry.jpg")
+img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,w_250/v1495635691/maia-eli-233485_jokpgc.jpg")
 
 Restaurant11 = Restaurant.create(name: "Ladder Spot", location_id: Location2.id,
 price: 4, hours: "11002000", description: "Homecooked food at outrageous prices",
-img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/q_100/v1495340043/starbucks_ncuvry.jpg")
+img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,h_140,w_250/v1495635768/gabriel-gurrola-57461_khpyrg.jpg")
 
 Restaurant12 = Restaurant.create(name: "Hipster's Edge", location_id: Location2.id,
 price: 4, hours: "16002000", description: "Hipster food that is very artsy",
-img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/q_100/v1495340043/starbucks_ncuvry.jpg")
+img_url: "http://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,w_250/v1495635778/abdullah-oguk-256739_hgooc4.jpg")
 
 
 
