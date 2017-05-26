@@ -34,7 +34,7 @@ Location6 = Location.create(location: "Austin",
 
 Restaurant.destroy_all
 Restaurant1 = Restaurant.create(name: "McDonalds", location_id: Location1.id,
-  price: 1, hours: "00002400", description: "The best best restaurant in the entire world. $5 for 20 golden chicken mcnuggets is the best deal in the world. McDonald's is Gordon Ramsey's favorite restaurant and is the only restaurant with 4 Michelin Stars.",
+  price: 1, hours: "00002400", description: "The best best restaurant in the entire world. $5 for 20 golden chicken mcnuggets is the best deal in the world. McDonald's is Gordon Ramseys favorite restaurant and is the only restaurant with 4 Michelin Stars.",
   img_url: "https://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,q_100,w_250/v1495338000/mcdonalds_js83ta.jpg")
 
 Restaurant2 = Restaurant.create(name: "Starbucks", location_id: Location1.id,
@@ -259,17 +259,17 @@ rating: 5, date_visited: "2017-04-08", description: "This is the best meal I hav
 Review30 = Review.create(user_id: User9.id, restaurant_id: Restaurant6.id,
 rating: 5, date_visited: "2017-01-21", description: "I cant believe I'm moving away from this place next month... :(")
 
-Review28 = Review.create(user_id: User6.id, restaurant_id: Restaurant7.id,
+Review87 = Review.create(user_id: User6.id, restaurant_id: Restaurant7.id,
 rating: 5, date_visited: "2017-03-24", description: "I go here every week. It's great!")
-Review29 = Review.create(user_id: User8.id, restaurant_id: Restaurant7.id,
+Review88 = Review.create(user_id: User8.id, restaurant_id: Restaurant7.id,
 rating: 4, date_visited: "2017-04-18", description: "I cant believe how long the line was, and I cant believe I would do it again.")
-Review30 = Review.create(user_id: User9.id, restaurant_id: Restaurant7.id,
+Review89 = Review.create(user_id: User9.id, restaurant_id: Restaurant7.id,
 rating: 5, date_visited: "2017-01-21", description: "My girlfriend broke up with me here. But at least I got a dope sandwhich.")
-Review28 = Review.create(user_id: User6.id, restaurant_id: Restaurant7.id,
+Review90 = Review.create(user_id: User6.id, restaurant_id: Restaurant7.id,
 rating: 3, date_visited: "2017-02-12", description: "The bread hurts my gums.")
-Review29 = Review.create(user_id: User8.id, restaurant_id: Restaurant7.id,
+Review91 = Review.create(user_id: User8.id, restaurant_id: Restaurant7.id,
 rating: 1, date_visited: "2017-02-18", description: "I waited an hour in line for a sandwhich. A sandwhich. The place is cramped, and there is no air conditioning.")
-Review30 = Review.create(user_id: User9.id, restaurant_id: Restaurant7.id,
+Review92 = Review.create(user_id: User9.id, restaurant_id: Restaurant7.id,
 rating: 5, date_visited: "2017-04-23", description: "I always go for the spicy buffalo sandwhich. It tastes amazing!")
 
 Review31 = Review.create(user_id: User3.id, restaurant_id: Restaurant8.id,
@@ -297,7 +297,7 @@ rating: 2, date_visited: "2017-04-11", description: "I thought I liked hipsters 
 Review40 = Review.create(user_id: User7.id, restaurant_id: Restaurant12.id,
 rating: 5, date_visited: "2017-02-28", description: "The best place to come to to hear a live band you've never heard of.")
 
-Review40 = Review.create(user_id: User8.id, restaurant_id: Restaurant13.id,
+Review93 = Review.create(user_id: User8.id, restaurant_id: Restaurant13.id,
 rating: 5, date_visited: "2017-03-19", description: "$1.63 carne asada kids burrito with french fries. Enough said.")
 Review41 = Review.create(user_id: User4.id, restaurant_id: Restaurant13.id,
 rating: 5, date_visited: "2017-04-08", description: "This place is grimey as hell, but I love trashy things so who am I to complain?")
@@ -358,12 +358,12 @@ rating: 2, date_visited: "2017-01-28", description: "My pizza with cockroaches t
 Review64 = Review.create(user_id: User3.id, restaurant_id: Restaurant22.id,
 rating: 2, date_visited: "2017-01-28", description: "My name is demo, and I think I am losing my memory because I dont remember commenting on this...")
 
-Review63 = Review.create(user_id: User2.id, restaurant_id: Restaurant23.id,
+Review94 = Review.create(user_id: User2.id, restaurant_id: Restaurant23.id,
 rating: 4, date_visited: "2017-04-25", description: "The meatlovers pizza is great")
-Review63 = Review.create(user_id: User7.id, restaurant_id: Restaurant23.id,
+Review95 = Review.create(user_id: User7.id, restaurant_id: Restaurant23.id,
 rating: 4, date_visited: "2017-02-23", description: "The vegetarian pizza is great")
 
-Review64 = Review.create(user_id: User8.id, restaurant_id: Restaurant24.id,
+Review96 = Review.create(user_id: User8.id, restaurant_id: Restaurant24.id,
 rating: 5, date_visited: "2017-02-26", description: "Is anyone ever NOT in the mood for pizza??!!")
 
 
@@ -375,40 +375,80 @@ Review67 = Review.create(user_id: User6.id, restaurant_id: Restaurant25.id,
 rating: 4, date_visited: "2017-05-03", description: "The orcs really know how to throw a party.")
 Review68 = Review.create(user_id: User8.id, restaurant_id: Restaurant25.id,
 rating: 1, date_visited: "2017-05-18", description: "Why are there no guard rails? My friend slipped and fell into the volcano...")
-Review64 = Review.create(user_id: User2.id, restaurant_id: Restaurant25.id,
+Review97 = Review.create(user_id: User2.id, restaurant_id: Restaurant25.id,
 rating: 5, date_visited: "2017-04-18", description: "Nothing like a fresh pizza out of the propane oven.")
-Review65 = Review.create(user_id: User4.id, restaurant_id: Restaurant25.id,
+Review98 = Review.create(user_id: User4.id, restaurant_id: Restaurant25.id,
 rating: 4, date_visited: "2017-04-18", description: "Orcs!")
 
-Review66 = Review.create(user_id: User10.id, restaurant_id: Restaurant26.id,
+Review99 = Review.create(user_id: User10.id, restaurant_id: Restaurant26.id,
 rating: 5, date_visited: "2017-01-18", description: "It was great!")
-Review67 = Review.create(user_id: User9.id, restaurant_id: Restaurant26.id,
+Review100 = Review.create(user_id: User9.id, restaurant_id: Restaurant26.id,
 rating: 4, date_visited: "2017-04-28", description: "Cant stop wont stop.")
 
-Review68 = Review.create(user_id: User4.id, restaurant_id: Restaurant27.id,
+Review101 = Review.create(user_id: User4.id, restaurant_id: Restaurant27.id,
 rating: 1, date_visited: "2017-04-18", description: "Worst food I have ever had!")
 
 Review69 = Review.create(user_id: User5.id, restaurant_id: Restaurant28.id,
 rating: 5, date_visited: "2017-03-21", description: "Awwwww yeeeaaaahhhh!!!!")
 
 Review70 = Review.create(user_id: User2.id, restaurant_id: Restaurant29.id,
-rating: 5, date_visited: "2017-24-18", description: "Duke's is my dogs name. Therefor I give this 5 stars.")
+rating: 5, date_visited: "2017-04-18", description: "Duke's is my dogs name. Therefor I give this 5 stars.")
 
 Review71 = Review.create(user_id: User7.id, restaurant_id: Restaurant30.id,
-rating: 5, date_visited: "2017-21-18", description: "This is the strangest chicken I've ever had.")
+rating: 3, date_visited: "2017-01-18", description: "This is the strangest chicken I've ever had.")
 Review72 = Review.create(user_id: User10.id, restaurant_id: Restaurant30.id,
-rating: 5, date_visited: "2017-14-18", description: "I cant tell what is different about this meat, but it is great!")
+rating: 5, date_visited: "2017-04-18", description: "I cant tell what is different about this meat, but it is great!")
 
+Review73 = Review.create(user_id: User6.id, restaurant_id: Restaurant31.id,
+rating: 3, date_visited: "2017-04-26", description: "This place is so underground it's practically in China.")
+Review74 = Review.create(user_id: User7.id, restaurant_id: Restaurant31.id,
+rating: 4, date_visited: "2017-06-13", description: "I love my skinny jeans and thick rimmed glasses.")
+Review75 = Review.create(user_id: User8.id, restaurant_id: Restaurant31.id,
+rating: 5, date_visited: "2017-04-21", description: "I cant get enough of their desserts. Too bad you've never heard of them.")
+Review76 = Review.create(user_id: User9.id, restaurant_id: Restaurant31.id,
+rating: 2, date_visited: "2017-05-30", description: "This place isn't hipster enough for me. If you're playing music I've heard of you're mainstream.")
+Review77 = Review.create(user_id: User10.id, restaurant_id: Restaurant31.id,
+rating: 5, date_visited: "2017-04-01", description: "I dont understand the crowd at all, but I like their cake. Goes well with PBR too, I guess.")
+Review78 = Review.create(user_id: User4.id, restaurant_id: Restaurant31.id,
+rating: 5, date_visited: "2017-04-30", description: "I love this place! I go here every week.")
 
+Review102 = Review.create(user_id: User9.id, restaurant_id: Restaurant32.id,
+rating: 2, date_visited: "2017-05-10", description: "The boss is kind of rude...")
+Review104 = Review.create(user_id: User10.id, restaurant_id: Restaurant32.id,
+rating: 5, date_visited: "2017-01-11", description: "This is the best place in Austin to get amazing cake!")
+Review103 = Review.create(user_id: User4.id, restaurant_id: Restaurant32.id,
+rating: 5, date_visited: "2017-04-20", description: "Cake is my weakness. I just cant get enough!")
 
+Review79 = Review.create(user_id: User3.id, restaurant_id: Restaurant33.id,
+rating: 3, date_visited: "2017-04-20", description: "It's a little weird that they make you wear a hipster beaning when you eat, but I guess I'll go with it, I guess. Food was ok.")
+Review80 = Review.create(user_id: User4.id, restaurant_id: Restaurant33.id,
+rating: 3, date_visited: "2017-03-20", description: "My waiter didn't even have a hat on, and I'm pretty sure he wasnt actually a hipster...")
+Review81 = Review.create(user_id: User9.id, restaurant_id: Restaurant33.id,
+rating: 4, date_visited: "2017-02-11", description: "I showed up to a date without my hipster beanie. I was so embarrassed. I'm never getting a second date.")
 
+Review82 = Review.create(user_id: User10.id, restaurant_id: Restaurant34.id,
+rating: 5, date_visited: "2017-01-09", description: "I tell ya what, the steak here is just top notch. I could eat here every night.")
+Review83 = Review.create(user_id: User4.id, restaurant_id: Restaurant34.id,
+rating: 4, date_visited: "2017-04-30", description: "My parents go here all the time so I finally decided to check it out. It was pretty good. I wish they would invite me...")
+
+Review84 = Review.create(user_id: User10.id, restaurant_id: Restaurant35.id,
+rating: 5, date_visited: "2017-01-11", description: "Remember the Alamo! The best part of this restaurant is the service. Mary Sue gets us free cake every time.")
+Review85 = Review.create(user_id: User4.id, restaurant_id: Restaurant35.id,
+rating: 5, date_visited: "2017-04-20", description: "Wow, our favorite waitress just got fired because someone let it leak online that she gave away free food. :(")
+
+Review86 = Review.create(user_id: User10.id, restaurant_id: Restaurant36.id,
+rating: 5, date_visited: "2017-02-14", description: "This place is so underground I could be a diglet.")
 
 
 Favorite.destroy_all
-Favorite1 = Favorite.create(user_id: 1, restaurant_id: 1)
-Favorite2 = Favorite.create(user_id: 1, restaurant_id: 4)
-Favorite3 = Favorite.create(user_id: 1, restaurant_id: 6)
-Favorite4 = Favorite.create(user_id: 1, restaurant_id: 11)
-Favorite5 = Favorite.create(user_id: 2, restaurant_id: 1)
-Favorite6 = Favorite.create(user_id: 5, restaurant_id: 1)
-Favorite7 = Favorite.create(user_id: 6, restaurant_id: 4)
+Favorite1 = Favorite.create(user_id: User1.id, restaurant_id: Restaurant1.id)
+Favorite2 = Favorite.create(user_id: User1.id, restaurant_id: Restaurant4.id)
+Favorite3 = Favorite.create(user_id: User1.id, restaurant_id: Restaurant6.id)
+Favorite4 = Favorite.create(user_id: User1.id, restaurant_id: Restaurant11.id)
+
+Reservation.destroy_all
+Reservation1 = Reservation.create(user_id: User1.id, restaurant_id: Restaurant1.id, time_slot: "07:30 PM", date: "2017-06-04", num_guests: 5)
+Reservation2 = Reservation.create(user_id: User1.id, restaurant_id: Restaurant4.id, time_slot: "08:30 PM", date: "2017-08-09", num_guests: 5)
+Reservation3 = Reservation.create(user_id: User1.id, restaurant_id: Restaurant8.id, time_slot: "07:30 PM", date: "2017-07-24", num_guests: 5)
+Reservation4 = Reservation.create(user_id: User1.id, restaurant_id: Restaurant27.id, time_slot: "08:30 PM", date: "2017-07-14", num_guests: 5)
+Reservation5 = Reservation.create(user_id: User1.id, restaurant_id: Restaurant29.id, time_slot: "07:30 PM", date: "2017-08-28", num_guests: 5)
