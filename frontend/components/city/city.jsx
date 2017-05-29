@@ -34,7 +34,7 @@ class CityRestaurants extends React.Component {
     // const location = this.props.match.url.slice(1);
     return (
       <div className="cityIdxMain">
-        <img src="http://res.cloudinary.com/drgxeu7sx/image/upload/v1495323223/index-header_rnrgje.jpg" />
+        <img src="https://res.cloudinary.com/drgxeu7sx/image/upload/v1495323223/index-header_rnrgje.jpg" />
         <SearchContainer />
         <div className="localRestaurantsIndexContainer">
             <p className="cityIdxText">Treat your tastebuds: Explore {this.props.city} restaurants</p>
