@@ -35,7 +35,7 @@ class HomeIndex extends React.Component {
   render() {
     return (
       <div className="pageCenter indexMain">
-        <img src="http://res.cloudinary.com/drgxeu7sx/image/upload/v1495323223/index-header_rnrgje.jpg" />
+        <img src="https://res.cloudinary.com/drgxeu7sx/image/upload/v1495323223/index-header_rnrgje.jpg" />
         <SearchContainer />
         <div className="featured">
           <div className="featuredHeader">
