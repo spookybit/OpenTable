@@ -1,5 +1,5 @@
 input[type=text] {
-  width: 100%;
+  width: 80%;
   padding: 12px 20px;
   margin: 8px 0;
   border: none;
@@ -12,12 +12,16 @@ input[type=text] {
 
 .searchCityDrop {
   border: none;
-  width: 90px;
+  width: 20%;
   height: 47px;
   margin-top: 13px;
   overflow: hidden;
   font-size: 15px;
   background: #F6F5F5;
+}
+
+.searchCityDrop:focus {
+  outline: none;
 }
 
 .formClick {

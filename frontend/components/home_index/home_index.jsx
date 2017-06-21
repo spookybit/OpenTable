@@ -46,15 +46,15 @@ class HomeIndex extends React.Component {
 
           </div>
 
-          <ul className="mainIndexList">
-            {this.citiesList()}
-          </ul>
 
         </div>
       </div>
     );
   }
 
+  //<ul className="mainIndexList">
+  //{this.citiesList()}
+  //</ul>
 }
 
 export default withRouter(HomeIndex);

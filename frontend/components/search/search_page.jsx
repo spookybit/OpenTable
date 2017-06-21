@@ -7,12 +7,24 @@ class SearchPage extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    window.scrollTo(0,0)
+  }
+
   searchEats() {
     const restaurants = this.props.searchResults;
 
-    return restaurants.map((restaurant, idx) => {
-      return <LocalRestaurant key={idx} restaurant={restaurant} />;
-    });
+    if (restaurants.length === 0) {
+      return (
+        <div className="emptySearch">
+          Nothing matches your search results
+        </div>
+      )
+    } else {
+      return restaurants.map((restaurant, idx) => {
+        return <LocalRestaurant key={idx} restaurant={restaurant} />;
+      });
+    }
   }
 
   render() {

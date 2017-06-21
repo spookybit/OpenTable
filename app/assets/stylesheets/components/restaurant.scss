@@ -1,7 +1,7 @@
 .restaurant {
   background-color: #F6F5F5;
   margin: auto;
-  height: 140vh;
+  // height: 140vh;
   padding-bottom: 50px;
 }
 
@@ -18,7 +18,7 @@
   max-width: 250px;
   max-height: 140px;
   padding: 0px 20px 0px 20px;
-  border-radius: 50px;
+  // border-radius: 0px;
 }
 
 .restHeaderText {
@@ -60,7 +60,7 @@
   margin-top: 30px;
   display: flex;
   flex-direction: column;
-  border-radius: 25px;
+  border-radius: 10px;
   padding-top: 15px;
   max-width: 900px;
   background-color: white;

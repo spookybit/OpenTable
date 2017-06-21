@@ -3,7 +3,7 @@
   margin: auto;
   padding-bottom: 50px;
   padding-top: 40px;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .searchResultsLabel {
@@ -12,7 +12,7 @@
   margin: auto;
   padding: 5px 10px;
   margin-bottom: 25px;
-  border-radius: 25px;
+  border-radius: 10px;
   font-size: 31px;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .reservationForm {
-  border-radius: 25px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -30,6 +30,18 @@
   margin-bottom: 25px;
   max-width: 900px;
   background-color: white;
+}
+
+.numGuests:focus {
+  outline: none;
+}
+
+.timeSlot:focus {
+  outline: none;
+}
+
+.reservationCalendar:focus {
+  outline: none;
 }
 
 .reservationHeader {
@@ -69,7 +81,7 @@
   margin-bottom: none;
   border: none;
   background: #DB0101;
-  width: 86px;
+  width: 10%;
   text-align: center;
   padding-top: 13px;
   padding-bottom: 13px;
@@ -85,4 +97,8 @@
   // border: 1px solid #ccc;
   margin: 20px;
   background-color: #F6F5F5
+}
+
+.emptySearch {
+  margin-left: 22px;
 }

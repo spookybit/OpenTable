@@ -56,6 +56,9 @@ class Heading extends React.Component {
           <Link to="/">
             <img src="https://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,w_256/v1495602139/munchk_logo_ms6dmf.png" className="logoheader"/>
           </Link>
+          <Link to="/">
+            <h3>Your Munch Time</h3>
+          </Link>
           {this.dropdownLocations()}
         </div>
         <div className="headerRight">
@@ -86,6 +89,9 @@ class Heading extends React.Component {
         <div className="headerLeft">
           <Link to="/">
             <img src="https://res.cloudinary.com/drgxeu7sx/image/upload/c_scale,w_256/v1495602139/munchk_logo_ms6dmf.png" className="logoheader"/>
+          </Link>
+          <Link to="/">
+            <h3>Your Munch Time</h3>
           </Link>
           {this.dropdownLocations()}
         </div>
