@@ -34,7 +34,9 @@ class ReservationListItem extends React.Component {
             </li>
           </div>
           <div>
-            <div className="cancelReserv" onClick={this.handleClick}>Cancel Reservation</div>
+            <Link to={'./reservations'}>
+              <div className="cancelReserv" onClick={this.handleClick}>Cancel Reservation</div>
+            </Link>
           </div>
         </div>
       </Link>
