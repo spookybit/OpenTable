@@ -78,7 +78,7 @@ class Restaurant extends React.Component {
   }
 
   render() {
-    
+
     const {restaurant} = this.props;
     return (
       <div className="restaurant">

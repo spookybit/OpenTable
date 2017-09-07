@@ -34,6 +34,8 @@ gem 'figaro'
 
 gem 'pg_search'
 
+gem 'newrelic_rpm'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
