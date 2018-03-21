@@ -36,6 +36,9 @@ gem 'pg_search'
 
 gem 'newrelic_rpm'
 
+gem 'nokogiri', '~>1.8.1'
+gem 'loofah', '~>2.2.1'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
